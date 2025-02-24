@@ -1,5 +1,12 @@
-.nav {
-  border-radius: 15px;
+.nav-bar{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+}
+a{
+  color: white;
 }
 .active-link {
   font-weight: bold;

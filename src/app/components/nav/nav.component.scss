@@ -1,13 +1,14 @@
-.nav-bar{
+.nav-bar {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  background-color:  gray;
-
+  background-color: gray;
 }
-a{
+.navbar-nav a {
   color: white;
+  padding: 10px;
+  margin: 5px;
 }
 .active-link {
   font-weight: bold;

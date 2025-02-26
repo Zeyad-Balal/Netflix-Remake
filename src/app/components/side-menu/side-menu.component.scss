@@ -1,14 +1,69 @@
-.side-menu-body{
-    width: 200px;
-    height: 100vh;
-    background-color:black;
-    
-    border-right: 2px  solid gray;
+.side-menu-body {
+  width: 250px;
+  height: 100vh;
+  border-right: 3px solid gray;
+  position: fixed; /* Fixes the sidebar in place */
+  top: 0;
+  left: 0;
+  //z-index: 1000; /* Ensures the sidebar is above other elements */
 }
+.side-menu-feed-items {
+  position: fixed;
+  top: 160px;
+  left: 5px;
+  list-style-type: none;
+}
+.side-menu-feed-items li {
+  padding: 10px;
+  width: 100%;
+}
+.active-link {
+  font-weight: bold;
+  background-color: rgb(211, 37, 37);
+  border-radius: 15px;
 
-.side-menu-items{
-
-    position: absolute;
-    top: 150px;
-    left: 5px;
-  }
+  //color: red !important;
+}
+.side-menu-header {
+  text-align: center;
+  position: fixed;
+  top: 60px;
+  left: 35px;
+}
+.side-menu-header h1 {
+  color: red;
+  font-size: 24px;
+}
+.side-menu-header #main-title {
+  color: white;
+}
+hr {
+  margin-left: 50px;
+}
+.side-menu-titles {
+  color: gray;
+  font-size: 16px;
+  text-align: center;
+  margin-right: 85px;
+  margin-top: 50px;
+}
+.side-menu-settings-items {
+  position: fixed;
+  top: 480px;
+  left: 5px;
+  list-style-type: none;
+}
+.side-menu-settings-items li {
+  padding: 10px;
+  margin-top: 15px;
+}
+// .side-menu-settings .side-menu-settings-items .side-menu-titles{
+// margin-bottom: 100px;
+//  }
+.icons {
+  margin-right: 8px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}

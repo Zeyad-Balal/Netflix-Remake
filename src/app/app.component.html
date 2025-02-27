@@ -1,3 +1,14 @@
-<!-- <app-nav></app-nav> -->
-<router-outlet></router-outlet>
-<app-side-menu></app-side-menu>
+<div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar (3 columns) -->
+      <aside class="col-md-2">
+        <app-side-menu></app-side-menu>
+      </aside>
+  
+      <!-- Main Content (9 columns) -->
+      <main class="col-md-9">
+        <app-nav></app-nav>
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>

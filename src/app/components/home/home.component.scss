@@ -1,105 +1,109 @@
-.setting{
-    width: 50px;
-    height:75px;
-    position: fixed;
-    right: 0;
-    top:400px;
-    background-color: white;
-    border-radius: 15%;
-}
-.btn-up
-{
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-    border-radius: 50%;
-    background-color: white;
-    opacity: 0.5;
-}
 
-//pesudo elements
-h1::after{
-    content: "";
-    width: 500px;;
-    height: 5px;
-    background-color: tomato;
-    // color: red;
-    font-size: 20px;
-    position: absolute;
-    bottom: 0;
-    right: 0;;
-}
 
-h1::before{
-    content: "";
-    width: 500px;;
-    height: 5px;
-    background-color: tomato;
-    // color: red;
-    font-size: 20px;
-    position: absolute;
-    top: 0;
-    left:0;
-}
+/*
+// .setting{
+//     width: 50px;
+//     height:75px;
+//     position: fixed;
+//     right: 0;
+//     top:400px;
+//     background-color: white;
+//     border-radius: 15%;
+// }
+// .btn-up
+// {
+//     width: 50px;
+//     height: 50px;
+//     position: fixed;
+//     right: 25px;
+//     bottom: 25px;
+//     border-radius: 50%;
+//     background-color: white;
+//     opacity: 0.5;
+// }
 
-h1::selection{
-    color:black;
-    background-color: red;
-}
+// //pesudo elements
+// h1::after{
+//     content: "";
+//     width: 500px;;
+//     height: 5px;
+//     background-color: tomato;
+//     // color: red;
+//     font-size: 20px;
+//     position: absolute;
+//     bottom: 0;
+//     right: 0;;
+// }
 
-// h1::first-letter{
+// h1::before{
+//     content: "";
+//     width: 500px;;
+//     height: 5px;
+//     background-color: tomato;
+//     // color: red;
+//     font-size: 20px;
+//     position: absolute;
+//     top: 0;
+//     left:0;
+// }
+
+// h1::selection{
+//     color:black;
+//     background-color: red;
+// }
+
+// // h1::first-letter{
+  
+// // }
+
+// .parent{
+//     width: 400px;
+//     height: 400px;
+//     background-color: rgb(71, 187, 255);
+    
+// }
+// .child{
+//     width: 100px;
+//     height: 100px;
+//     background-color:tomato;
+// }
+
+// //hover element
+// .parent:hover .child{
+//     background-color: green;
+//     cursor: pointer;
+// }
+
+// .test{
+// width: 200px;
+// height: 200px;
+// background-color: tomato;
+// transition-property: width;
+// transition-duration: 1s;
+// transition-delay: 1s;
+// //shorthand
+// // transition: width 2s 1s ease;
+// // transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+// }
+
+// .test:hover{
+//    width:100%;
   
 // }
 
-.parent{
-    width: 400px;
-    height: 400px;
-    background-color: rgb(71, 187, 255);
-    
-}
-.child{
-    width: 100px;
-    height: 100px;
-    background-color:tomato;
-}
-
-//hover element
-.parent:hover .child{
-    background-color: green;
-    cursor: pointer;
-}
-
-.test{
-width: 200px;
-height: 200px;
-background-color: tomato;
-transition-property: width;
-transition-duration: 1s;
-transition-delay: 1s;
-//shorthand
-// transition: width 2s 1s ease;
-// transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
-}
-
-.test:hover{
-   width:100%;
-  
-}
-
-img{
-    position: absolute;
-    right: 50%;
-    top: 50%;
-    // transform: rotate(50deg);
-    transition: all 1s;
-    transform-origin: top left;
-}
-img:hover{
-    transform: rotate(360deg);
-    // transform: scale(2) rotate(360deg);
-    // transform: scaleX();
-    // transform: translateY(100px);
-    // transform: skew(5deg); // slope
-}
+// img{
+//     position: absolute;
+//     right: 50%;
+//     top: 50%;
+//     // transform: rotate(50deg);
+//     transition: all 1s;
+//     transform-origin: top left;
+// }
+// img:hover{
+//     transform: rotate(360deg);
+//     // transform: scale(2) rotate(360deg);
+//     // transform: scaleX();
+//     // transform: translateY(100px);
+//     // transform: skew(5deg); // slope
+// }
+*/

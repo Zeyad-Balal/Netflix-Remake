@@ -1,22 +1,47 @@
-.nav-bar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: gray;
-}
-.navbar-nav a {
+/* Align search field */
+.search-field input {
+  width: 265px;
+  height: 35px;
+  // border: 0.25px solid white;
   color: white;
-  padding: 10px;
-  margin: 5px;
+  border-radius: 15px;
+  background-color: transparent;
+  padding-left: 10px;
 }
-.active-link {
-  font-weight: bold;
-  color: red !important;
-}
+
+/* Logo styling */
 .logo {
-  position: relative;
-  width: 50px;
-  left: 15px;
-  background-size: contain;
+  height: 40px;
+  border-radius: 50%;
+  border: 3.5px solid rgb(211, 37, 37);
 }
+
+/* Navbar Styling */
+.nav-bar {
+  margin-left: 100px;
+  margin-top: 30px;
+  padding: 15px 50px;
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Moves search to left, logo & name to right */
+  align-items: center;
+}
+
+/* Move logo & name further right */
+.nav-items {
+  margin-left:180px; /* Shift more to the right */
+}
+
+/* Add space between logo and name */
+// .nav-items h3 {
+//   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+//   margin-right:  20px; 
+//   font-size: medium;/* Adds more spacing between logo and name */
+// }
+
+/* Reduce placeholder font size */
+.search-field input::placeholder {
+  font-size: 12px; /* Adjust size */
+  color: rgba(255, 255, 255, 0.7); /* Light color */
+}
+

@@ -1,1 +1,13 @@
-
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-md-3 mb-4" *ngFor="let movie of movies">
+        <div class="card h-100">
+          <img [src]="movie.poster" class="card-img-top" alt="{{ movie.title }}">
+          <div class="card-body text-center">
+            <h6 class="card-title">{{ movie.title }}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

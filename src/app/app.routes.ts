@@ -8,7 +8,7 @@ import { WatchListComponent } from './components/watch-list/watch-list.component
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'plans',
     pathMatch: 'full',
   },
   {

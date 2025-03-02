@@ -1,0 +1,157 @@
+// .login-form{
+//     background-image: url('../../../assets/images/photo-1575936123452-b67c3203c357.avif');
+//     background-size: cover;
+//     background-position: center center;
+// }
+.cont{
+    background-image: url("../../../assets/images/n.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 100vh;
+    
+}
+
+.login-form {
+    height: 100vh;
+background-color: white;
+    color: white;
+
+}
+
+.cr{
+    cursor: pointer;
+}
+
+.login-form .form-body {
+    background-color: rgba(0, 0, 0, 0.85);
+
+    border-radius: 7px;
+    padding: 50px;
+    width: 25%;
+    margin: auto;
+    transform: translateY(10%);
+
+}
+
+.login-form .form-body h2 {
+    color: white;
+    margin-bottom: 12px;
+    // font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.login-form .form-body .form-inputs input {
+    margin: 5px 0;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    border: 0.1px solid rgba(255, 255, 255, 0.35);
+}
+
+.login-form .form-body .form-inputs input:focus {
+    border: 2px solid white;
+}
+.password{
+    position: relative;
+}
+.password span{
+position: absolute;
+top: 25%;
+right: 5%;
+opacity: 0.5;
+}
+
+.login-form .form-body .form-inputs .signin-btn button {
+    color: white;
+    margin: 5px 0 10px 0;
+    border-radius: 4px;
+    background-color: red;
+    text-align: center;
+    width: 100%;
+}
+
+.login-form .form-body .form-inputs .signin-btn button:hover {
+    background-color: rgb(168, 10, 10);
+}
+
+.or {
+    color: gray;
+    font-weight: lighter;
+    text-align: center;
+    margin: 10px 0 10px 47%;
+}
+
+.login-form .form-body .form-inputs .signin-code button {
+    color: white;
+    margin: 5px 0 10px 0;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 100%;
+}
+
+.login-form .form-body .form-inputs .signin-code button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.forgot-password {
+    text-align: center;
+    margin: 3px 0;
+}
+
+.forgot-password a {
+    color: white;
+    font-weight: 100;
+    text-decoration: underline;
+}
+
+.remember-me {
+    margin: 10px 0;
+}
+
+.remember-me input {
+    accent-color: gray;
+    border: 0.1px solid white;
+    transition: all 2s;
+}
+
+.remember-me input:checked {
+    accent-color: black;
+}
+
+.remember-me label {
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.signup {
+    margin: 10px 0;
+}
+
+.signup p {
+    color: grey;
+    font-weight: 400;
+}
+
+
+.signup a {
+
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.warn-p{
+    color: grey;
+    font-size: small;
+}
+
+.learnmore a{
+    font-size: small;
+    font-weight: lighter;
+}

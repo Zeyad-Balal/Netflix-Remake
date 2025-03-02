@@ -4,12 +4,18 @@ import { MovieSeriesDetailsComponent } from './components/movie-series-details/m
 import { ProfileComponent } from './components/profile/profile.component';
 import { PlansComponent } from './components/plans/plans.component';
 import { WatchListComponent } from './components/watch-list/watch-list.component';
+import { LoginComponent } from './components/login/login.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'plans',
+    redirectTo: 'login',
     pathMatch: 'full',
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    title: 'Login',
   },
   {
     path: 'home',

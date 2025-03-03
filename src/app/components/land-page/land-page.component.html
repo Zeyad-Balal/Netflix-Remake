@@ -1,98 +1,95 @@
 <section>
-    <div class="cont">
-        <div class="overlay">
-            <!-- header -->
-            <div class="header">
-                <div class="btns">
-                    <select class="cr">
-                        <option>English</option>
-                        <option>العربية</option>
-                    </select>
-                    <button class="btn">Sign In</button>
-                </div>
-
-                <div class="clear-fix"></div>
-
-                <div class="logo">
-                    <h1>NE<span>TFL</span>IX</h1>
-                </div>
-            </div>
-
-            <!--body  -->
-            <div class="body">
-                <div class="body-content">
-                    <div class="body-header">
-                        <h2>Unlimited movies, TV
-                            <br>shows, and more.
-                        </h2>
-                        <!-- <h2>Watch anywhere. Cancel anytime.</h2> -->
-                    </div>
-                    <span>Starts at EGP 100. Cancel anytime.</span>
-                    <p>Ready to watch? Enter your email to create or restart your membership.</p>
-                </div>
-
-                <div class="body-form">
-                    <input type="email" placeholder="Email address">
-                    <button class="btn">Get Started
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
-
-
-
-            <!-- <div class="sperator">
-            
-            </div> -->
+  <div class="cont">
+    <div class="overlay">
+      <!-- header -->
+      <div class="header">
+        <div class="logo">
+          <img src="../../../assets/images/Netflix_Logo_RGB.png" alt="" />
         </div>
-    </div>
+        <div class="btns">
+          <select class="cr">
+            <option>English</option>
+            <option>العربية</option>
+          </select>
+          <button class="btn">Sign In</button>
+        </div>
+      </div>
 
+      <!--body  -->
+      <div class="body">
+        <div class="body-content">
+          <div class="body-header">
+            <h2>Unlimited movies, TV <br />shows, and more.</h2>
+            <!-- <h2>Watch anywhere. Cancel anytime.</h2> -->
+          </div>
+          <span>Starts at EGP 100. Cancel anytime.</span>
+          <p>
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </p>
+        </div>
+
+        <div class="body-form">
+          <input type="email" placeholder="Email address" />
+          <button class="btn">
+            Get Started
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- <div class="sperator"></div> -->
+    </div>
+  </div>
 </section>
 
 <section class="second-section">
-
-    <div class="trending-now">
-        <h2>Trending Now</h2>
-        <div class="movies cr">
-            <div class="movie" *ngFor="let movie of movies">
-                <img [src]="movie.poster" alt="" />
-                <!-- <h3>{{ movie.title }}</h3> -->
-            </div>
-        </div>
-        <br>
-        <h2>More Reasons to Join</h2>
-        <br>
-<div class="about cr">
-            <!-- card1 -->
-            <div class="about-cards">
-
-                <h3>Enjoy on your TV</h3>
-                <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
-            </div>
-    
-            <!-- card2 -->
-    
-            <div class="about-cards">
-    
-                <h3>Download your shows to watch offline</h3>
-                <p>Save your favorites easily and always have something to watch.</p>
-            </div>
-    
-            <!-- card3 -->
-    
-            <div class="about-cards">
-    
-                <h3>Watch everywhere</h3>
-                <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
-            </div>
-            <!-- card4 -->
-    
-            <div class="about-cards">
-    
-                <h3>Create profiles for kids</h3>
-                <p>Send kids on adventures with their favorite characters in a space made just for them — free with your membership.</p>
-            </div>
-</div>
-
+  <div class="trending-now">
+    <h2 class="fir-h2">Trending Now</h2>
+    <div class="movies cr">
+      <div class="movie" *ngFor="let movie of movies">
+        <img [src]="movie.poster" alt="" />
+        <!-- <h3>{{ movie.title }}</h3> -->
+      </div>
     </div>
+    <br />
+    <h2 class="sec-h2">More Reasons to Join</h2>
+    <br />
+    <div class="about cr">
+      <!-- card1 -->
+      <div class="about-cards">
+        <h3>Enjoy on your TV</h3>
+        <p>
+          Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray
+          players, and more.
+        </p>
+      </div>
+
+      <!-- card2 -->
+
+      <div class="about-cards">
+        <h3>Download your shows to watch offline</h3>
+        <p>Save your favorites easily and always have something to watch.</p>
+      </div>
+
+      <!-- card3 -->
+
+      <div class="about-cards">
+        <h3>Watch everywhere</h3>
+        <p>
+          Stream unlimited movies and TV shows on your phone, tablet, laptop,
+          and TV.
+        </p>
+      </div>
+      <!-- card4 -->
+
+      <div class="about-cards">
+        <h3>Create profiles for kids</h3>
+        <p>
+          Send kids on adventures with their favorite characters in a space made
+          just for them — free with your membership.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>

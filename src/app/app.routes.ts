@@ -5,6 +5,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { PlansComponent } from './components/plans/plans.component';
 import { WatchListComponent } from './components/watch-list/watch-list.component';
 import { LoginComponent } from './components/login/login.component';
+import { LandPageComponent } from './components/land-page/land-page.component';
 
 export const routes: Routes = [
   {
@@ -16,6 +17,11 @@ export const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     title: 'Login',
+  },
+  {
+    path: 'land',
+    component: LandPageComponent,
+    title: 'Netflix',
   },
   {
     path: 'home',

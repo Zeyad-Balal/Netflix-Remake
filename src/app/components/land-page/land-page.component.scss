@@ -1,0 +1,130 @@
+.cont {
+    background-image: url("../../../assets/images/n.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 100vh;
+    font-family: 'Segoe UI';
+    overflow: hidden;
+
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.712);
+    height: 100vh;
+}
+
+.cr {
+    cursor: pointer;
+}
+
+.header .btns {
+    margin-right: 70px;
+    transform: translate(-80%, 80%);
+    float: right;
+}
+
+.header .btns button {
+    margin-left: 10px;
+    background-color:#E50914;
+    width: 100px;
+    border-radius:0.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+.header .btns select {
+    
+    background-color:black;
+    text-align: center;
+    opacity: 0.7;
+    width: 130px;
+    height: 35px;
+    padding: 5px;
+    border-radius:0.25rem;
+    font-size: medium;
+    font-weight: 700;
+    color: white;
+    // appearance: none;
+}
+
+.header .logo h1 {
+    transform: translate(20%, 40%);
+    color:#E50914;
+    font-size: 40px;
+    font-weight: bold;
+    width: 50%;
+}
+
+.body{
+    transform: translateY(30%);
+    // background-color: aqua;
+    text-align: center;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    height: 100vh;
+    font-family: 'Segoe UI';
+}
+
+.body .body-content {
+   
+    // background-color:brown;
+    color: white;
+    padding: 10px 10px 10px 10px;
+
+}
+
+.body .body-content .body-header h2{
+    font-size: 55px;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.body .body-content span{
+font-size: 20px;
+font-weight: 700;
+}
+
+.body .body-content p{
+    margin-top: 25px;
+    font-weight: 500;
+}
+
+.body .body-form{
+    // background-color: #C11119;
+    color: white;
+    padding: 10px 10px 10px 10px;
+}
+
+.body .body-form input{
+    margin-top: 5px;
+    color: white;
+    opacity: 0.8;
+    background-color: black;
+    border-radius: 4px;
+    padding: 10px;
+    height: 50px;
+    width: 28%;
+    border: 0.1px solid rgba(255, 255, 255, 0.35);
+
+}
+.body .body-form input:focus {
+    border: 2px solid white;
+}
+
+.body .body-form input::placeholder {
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
+}
+
+.body .body-form button{
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+    height: 50px;
+    width: 170px;
+    border-radius: 0.25rem;
+    background-color:#E50914;
+    padding: 10px 10px 10px 10px;
+}

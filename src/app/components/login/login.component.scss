@@ -3,23 +3,37 @@
 //     background-size: cover;
 //     background-position: center center;
 // }
-.cont{
+.cont {
     background-image: url("../../../assets/images/n.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
     height: 100vh;
-    
+    font-family: 'Segoe UI';
+    overflow: hidden;
+
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.712);
+    height: 100vh;
+}
+
+h1 {
+    transform: translate(20%, 40%);
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .login-form {
     height: 100vh;
-background-color: white;
+    background-color: white;
     color: white;
 
 }
 
-.cr{
+.cr {
     cursor: pointer;
 }
 
@@ -56,14 +70,16 @@ background-color: white;
 .login-form .form-body .form-inputs input:focus {
     border: 2px solid white;
 }
-.password{
+
+.password {
     position: relative;
 }
-.password span{
-position: absolute;
-top: 25%;
-right: 5%;
-opacity: 0.5;
+
+.password span {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    opacity: 0.5;
 }
 
 .login-form .form-body .form-inputs .signin-btn button {
@@ -146,12 +162,12 @@ opacity: 0.5;
     text-decoration: none;
 }
 
-.warn-p{
+.warn-p {
     color: grey;
     font-size: small;
 }
 
-.learnmore a{
+.learnmore a {
     font-size: small;
     font-weight: lighter;
 }

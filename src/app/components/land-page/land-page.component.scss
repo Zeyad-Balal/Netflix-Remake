@@ -1,9 +1,9 @@
 .cont {
     background-image: url("../../../assets/images/n.jpg");
     background-size: cover;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     background-position: center center;
-    height: 100vh;
+    // height: 100vh;
     font-family: 'Segoe UI';
     overflow: hidden;
 
@@ -11,7 +11,7 @@
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.712);
-    height: 100vh;
+    // height: 100vh;
 }
 
 .cr {
@@ -20,28 +20,30 @@
 
 .header .btns {
     margin-right: 70px;
-    transform: translate(-80%, 80%);
+    // transform: translate(-80%, 80%);
     float: right;
 }
-
+.clear-fix {
+    clear: both;
+}
 .header .btns button {
     margin-left: 10px;
-    background-color:#E50914;
+    background-color: #E50914;
     width: 100px;
-    border-radius:0.25rem;
+    border-radius: 0.25rem;
     font-weight: bold;
     color: white;
 }
 
 .header .btns select {
-    
-    background-color:black;
+
+    background-color: black;
     text-align: center;
     opacity: 0.7;
     width: 130px;
     height: 35px;
     padding: 5px;
-    border-radius:0.25rem;
+    border-radius: 0.25rem;
     font-size: medium;
     font-weight: 700;
     color: white;
@@ -49,15 +51,15 @@
 }
 
 .header .logo h1 {
-    transform: translate(20%, 40%);
-    color:#E50914;
+    // transform: translate(20%, 40%);
+    color: #E50914;
     font-size: 40px;
     font-weight: bold;
     width: 50%;
 }
 
-.body{
-    transform: translateY(30%);
+.body {
+    // transform: translateY(30%);
     // background-color: aqua;
     text-align: center;
     color: white;
@@ -67,36 +69,36 @@
 }
 
 .body .body-content {
-   
+
     // background-color:brown;
     color: white;
     padding: 10px 10px 10px 10px;
 
 }
 
-.body .body-content .body-header h2{
+.body .body-content .body-header h2 {
     font-size: 55px;
     font-weight: 900;
     margin-bottom: 25px;
 }
 
-.body .body-content span{
-font-size: 20px;
-font-weight: 700;
+.body .body-content span {
+    font-size: 20px;
+    font-weight: 700;
 }
 
-.body .body-content p{
+.body .body-content p {
     margin-top: 25px;
     font-weight: 500;
 }
 
-.body .body-form{
+.body .body-form {
     // background-color: #C11119;
     color: white;
     padding: 10px 10px 10px 10px;
 }
 
-.body .body-form input{
+.body .body-form input {
     margin-top: 5px;
     color: white;
     opacity: 0.8;
@@ -108,23 +110,108 @@ font-weight: 700;
     border: 0.1px solid rgba(255, 255, 255, 0.35);
 
 }
+
 .body .body-form input:focus {
     border: 2px solid white;
 }
 
 .body .body-form input::placeholder {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 500;
     color: grey;
 }
 
-.body .body-form button{
+.body .body-form button {
     color: white;
     font-weight: bold;
     margin-left: 5px;
     height: 50px;
     width: 170px;
     border-radius: 0.25rem;
-    background-color:#E50914;
+    background-color: #E50914;
     padding: 10px 10px 10px 10px;
+}
+
+// style for curved div // two section separator 
+.sperator {
+    background-color: #090E22;
+    height: 100px;
+    width: 100%;
+    border-radius: 50% 50% 0 0;
+    position: relative;
+    bottom: 12%;
+    z-index: 2;
+    box-shadow: inset 2px 1px 10px #455fbe;
+    border: 6px solid #790626;
+}
+
+.second-section {
+    // overflow: hidden;
+}
+
+//secont section
+.trending-now {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.trending-now h2 {
+    // transform: translate(15%, 110%);
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    // margin-left: 50px;
+    // margin-top: 5px;
+}
+
+.trending-now .movies {
+    
+    display: flex;
+justify-content: center;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    
+}
+
+.trending-now .movies img {
+    width: 100%;
+    /* Full width */
+    height: 350px;
+    /* Fixed height */
+    border-radius: 0.5rem;
+    border: #090E22 2px solid;
+    transition: transform 0.5s;
+
+}
+
+.trending-now .movies img:hover {
+    transform: scale(1.1);
+}
+
+.about  {
+display: flex;
+justify-content: center;
+}
+
+.about-cards {
+background-color:#1A2144;
+    width: 300px;
+    height: 300px;
+    border-radius: 0.5rem;
+    margin: 10px;
+    padding: 15px;
+    transition: transform 0.5s;
+}
+.about-cards:hover{
+    transform: scale(1.1);
+}
+
+.about-cards h3{
+    color: white;
+
+}
+
+.about-cards p{
+    color:grey;
+    padding: 5px;
 }

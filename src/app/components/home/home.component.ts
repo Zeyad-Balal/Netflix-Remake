@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
   constructor(private readonly _HomeService : HomeService) { }
 
   ngOnInit(): void {
-    this._HomeService.getTopMovies().subscribe(
+    this._HomeService.getAllMovies().subscribe(
     {
       next: (data) => {
         console.log(data);

@@ -47,8 +47,8 @@
   <div class="trending-now">
     <h2 class="fir-h2">Trending Now</h2>
     <div class="movies cr">
-      <div class="movie" *ngFor="let movie of movies">
-        <img [src]="movie.poster" alt="" />
+      <div class="movie" *ngFor="let movie of movies.slice(16, 20)">
+        <img [src]="image_path+movie.poster_path" alt="" />
         <!-- <h3>{{ movie.title }}</h3> -->
       </div>
     </div>

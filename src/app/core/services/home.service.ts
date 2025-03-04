@@ -11,11 +11,11 @@ export class HomeService {
     private _HttpClient: HttpClient
   ) { }
 
-  getTopMovies() {
+  getAllMovies() {
     const headers = new HttpHeaders({
       Authorization: `Bearer ${environment.token}`, // v4 API Key
     });
-    return this._HttpClient.get(`${environment.base_url}discover/movie?${environment.token}&language=en-US&sort_by=popularity.desc&page=1` , {headers});
+    return this._HttpClient.get(`${environment.base_url}movie/popular?${environment.token}&language=en-US&sort_by=popularity.desc&page=1` , {headers});  
   
   }
 }

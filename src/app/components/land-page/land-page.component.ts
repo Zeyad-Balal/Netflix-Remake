@@ -42,7 +42,7 @@ export class LandPageComponent implements OnInit {
   ngOnInit(): void {
 
     this._LandPageService.getTrendingMovies().subscribe( {
-      next:(res:any)=>{
+      next:(res:MovieResponse)=>{
         this.movies = res.results;
         console.log(res);
       }

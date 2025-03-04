@@ -1,23 +1,132 @@
-
-.parent{
-    background-color: tomato;
-    // height: 500px;
-    // padding: 2px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 10px;
-    // column-gap: 10px;
-    // justify-content: center;
-    // align-items: center;
-    // align-content: center;
+.parent {
+  background-color: tomato;
+  // height: 500px;
+  // padding: 2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  // column-gap: 10px;
+  // justify-content: center;
+  // align-items: center;
+  // align-content: center;
+}
+.child {
+  background-color: #09c;
+  width: 10%;
+  border: 1px solid black;
+  width: 25%;
+  // margin: 10px;
+}
+.cont {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  // background-color: rgb(184, 172, 172);
+}
+.header .sign-out button {
+  background-color: #ffffff;
+  color: black;
+  width: 150px;
+  margin-right: 30px;
+  margin-top: 30px;
+  // border: 1px solid black;
+  border: none;
+  font-weight: 600;
+  font-size: 19px;
+}
+.header .sign-out button:hover {
+  text-decoration: underline;
 }
 
+.logo img {
+  width: 15%;
+  margin-left: 20px;
+  margin-top: 5px;
+}
 
-.child{
-    background-color: #09c;
-    width: 10%;
-    border: 1px solid black;
+.plans-cards-container {
+    display: flex;
+    flex-direction: column;
+    // align-items: center; 
+  }
+  .plans-title {
+    margin-bottom: 50px;
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 600;
+    margin-left: 170px;
+  }  
+
+  .plans {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .next-btn {
+   
+    width: 50%;
+    margin: 30px auto;
+    padding: 10px 20px;
     width: 25%;
-    // margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+.plan-card {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for soft separation */
+  width: 23%;
+  border: rgb(226, 221, 221) 1px solid;
+  border-radius: 15px;
+  padding: 10px 10px 10px 10px;
+}
+
+.plan-name {
+  background: linear-gradient(90deg, #214E9C, #7e38a3);
+  padding: 10px 8px 8px 10px;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 30px;
+  // width: 100%;
+}
+.plan-name h3 {
+  font-size: 25px;
+  font-weight: bolder;
+}
+.plan-name h6 {
+  //   margin-top: 10px;
+}
+.plan-name h3,
+.plan-name h6 {
+  margin-left: 10px;
+}
+
+.feat {
+  margin-left: 15px;
+}
+.feat span {
+  font-size: 16px;
+  font-weight: 600;
+  color: grey;
+}
+.basic-plan .plan-name {
+  background: linear-gradient(90deg, #214E9C, #310d45);
+}
+
+.premium-plan .plan-name {
+  background: linear-gradient(90deg, #5c3ccc, #d60420);
 }

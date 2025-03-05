@@ -1,23 +1,23 @@
-.parent {
-  background-color: tomato;
-  // height: 500px;
-  // padding: 2px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  row-gap: 10px;
-  // column-gap: 10px;
-  // justify-content: center;
-  // align-items: center;
-  // align-content: center;
-}
-.child {
-  background-color: #09c;
-  width: 10%;
-  border: 1px solid black;
-  width: 25%;
-  // margin: 10px;
-}
+// .parent {
+//   background-color: tomato;
+//   // height: 500px;
+//   // padding: 2px;
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   row-gap: 10px;
+//   // column-gap: 10px;
+//   // justify-content: center;
+//   // align-items: center;
+//   // align-content: center;
+// }
+// .child {
+//   background-color: #09c;
+//   width: 10%;
+//   border: 1px solid black;
+//   width: 25%;
+//   // margin: 10px;
+// }
 .cont {
   margin: 0;
   padding: 0;
@@ -44,9 +44,9 @@
 }
 
 .logo img {
-  width: 15%;
-  margin-left: 20px;
-  margin-top: 5px;
+  width: 11.5%;
+  margin-left: 24px;
+  margin-top: 3px;
 }
 
 .plans-cards-container {
@@ -54,36 +54,73 @@
     flex-direction: column;
     // align-items: center; 
   }
-  .plans-title {
-    margin-bottom: 50px;
-    margin-top: 20px;
-    font-size: 35px;
-    font-weight: 600;
-    margin-left: 170px;
-  }  
+
 
   .plans {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+   
+  }
+
+  .plans .plans-title h2 {
+    align-self: flex-start;
+    // margin-left: ; /* Adjust this value based on your layout */
+    margin: 1% 0 2% 14.5%;
+}
+.plans .plans-title span   {
+  align-self: flex-start;
+  // margin-left: ; /* Adjust this value based on your layout */
+  margin: 1% 0 2% 14.5%;
+}
+
+  .plan{
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     width: 100%;
   }
 
+
+
+ 
   .next-btn {
    
     width: 50%;
     margin: 30px auto;
-    padding: 10px 20px;
+    padding: 20px 20px;
     width: 25%;
     font-size: 18px;
-    font-weight: bold;
-    background-color: red;
+    font-weight: 900;
+    background-color:#d31d26;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .note{
+    width:70%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(161, 161, 161);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .note span{
+    text-align: left;
+  }
+  .note span a{
+    text-decoration: none;
+    font-weight: 400;
+  }
+  .note span a:hover{
+    text-decoration: underline;
   }
 
 .plan-card {
@@ -93,7 +130,14 @@
   border: rgb(226, 221, 221) 1px solid;
   border-radius: 15px;
   padding: 10px 10px 10px 10px;
+  transition: all 0.5s;
 }
+.plan-card:hover{
+  transform: scale(0.9);
+  box-shadow: 20px 20px 20px rgba(165, 7, 7, 0.5); /* Light shadow for soft separation */
+
+}
+
 
 .plan-name {
   background: linear-gradient(90deg, #214E9C, #7e38a3);
@@ -101,8 +145,18 @@
   border-radius: 10px;
   color: white;
   margin-bottom: 30px;
-  // width: 100%;
+  margin-top: 10px;
+position: relative;
 }
+
+.plan-name .ico{
+  position: absolute;
+  font-size: 22.5PX;
+  bottom:  15PX;
+  right: 20px;
+}
+
+
 .plan-name h3 {
   font-size: 25px;
   font-weight: bolder;
@@ -127,6 +181,29 @@
   background: linear-gradient(90deg, #214E9C, #310d45);
 }
 
+.most-popular-flag {
+  background-color: #d60420; /* Red Netflix-style flag */
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 8px 8px 0 0 ;
+  position: absolute;
+  top: -23px; /* Adjust to position it above the plan card */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+/* Ensure the premium plan card is positioned relatively */
+.premium-plan {
+  position: relative;
+}
+
+
 .premium-plan .plan-name {
   background: linear-gradient(90deg, #5c3ccc, #d60420);
 }
+
+

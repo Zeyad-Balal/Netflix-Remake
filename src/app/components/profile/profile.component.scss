@@ -1,0 +1,63 @@
+// // css variables
+:root {
+    --main-color: lightblue;
+    --color: red;
+}
+
+.div1 {
+    background-color: var(--main-color);
+    color: var(--color);
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    border: 5px solid black;
+}
+
+.div2 {
+    background-color: var(--main-color);
+    color: var(--color);
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    border: 5px solid black;
+
+}
+
+.test {
+    background-color: red;
+    color: black;
+}
+
+.test>span {
+    color: greenyellow;
+
+}
+
+ p{
+    background-color: black;
+    text-align: center;
+    color:white;
+    text-shadow: 0 0 5px red;
+}
+
+// .test~span {
+//     color: blue($color: #000000);
+//     background-color: blueviolet;
+//     border: 2.5px solid black;
+// }
+
+//  p {
+//     color: blue !important;
+// }
+
+// }
+// .item h2{
+//     cursor: pointer;
+// }
+// .item p{
+//     display: none;
+// }
+// //  help to catch the next sibling of h2
+// .item h2:hover + p {
+//     display: block;
+// }

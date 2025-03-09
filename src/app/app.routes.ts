@@ -9,7 +9,7 @@ import { LandPageComponent } from './components/land-page/land-page.component';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: '', 
     redirectTo: 'login',
     pathMatch: 'full',
   },

@@ -9,7 +9,7 @@
         <ul class="nav flex-column">
           <h6>Menu</h6>
           <li class="nav-item">
-            <a routerLink="home" class="nav-link" routerLinkActive="active">
+            <a routerLink="/home" class="nav-link" routerLinkActive="active">
               <span><i class="fas fa-home"></i> Home</span>
             </a>
           </li>
@@ -78,7 +78,31 @@
       </div>
     </div>
     <!-- content -->
-    <div class="col-10 content"></div>
+    <div class="col-10 content">
+      <app-nav></app-nav>
+      <div class="content-body">
+        <div class="trend-movies">
+          <h4>Trending Movies</h4>
+          <div class="movie-container">
+            <div class="image">
+              <img src="../../../assets/images/download (1).jpg" alt="">
+              <div class="overlay">
+                <div class="movie-footer">
+                  <div class="movie-info">
+                    <h6>La casa de papel</h6>
+                    <p>2020</p>
+                    <span>7.9 rate</span>
+                  </div>
+                  <div class="movie-btns">
+                    <button>Watch now</button>
+                    <button>+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-

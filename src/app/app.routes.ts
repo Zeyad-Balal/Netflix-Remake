@@ -10,7 +10,7 @@ import { LandPageComponent } from './components/land-page/land-page.component';
 export const routes: Routes = [
   {
     path: '', 
-    redirectTo: 'login',
+    redirectTo: 'home',
     pathMatch: 'full',
   },
   {
@@ -27,11 +27,13 @@ export const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     title: 'Home',
-  },
-  {
-    path: 'movies',
-    component: MovieSeriesDetailsComponent,
-    title: 'Movies',
+    children: [
+      {
+        path: 'movies',
+        component: MovieSeriesDetailsComponent,
+        title: 'Movies',
+      }
+    ]
   },
   {
     path: 'profile',

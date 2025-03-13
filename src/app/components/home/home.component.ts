@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { HomeService } from '../../core/services/home.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { NavComponent } from "../nav/nav.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule, CommonModule,RouterOutlet ,RouterLink, RouterLinkActive, NavComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

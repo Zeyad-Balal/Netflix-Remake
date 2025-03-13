@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NavComponent } from '../nav/nav.component';
 import { HomeService } from '../../core/services/home.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -7,7 +6,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavComponent,FormsModule,CommonModule],
+  imports: [FormsModule,CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

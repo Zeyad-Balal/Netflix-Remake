@@ -1,140 +1,158 @@
 .home-container {
-    display: flex;
-    background-color: #141414; // Dark background for modern look
+  display: flex;
+  background-color: #141414; // Dark background for modern look
 }
 
 .logo img {
-    width: 80%;
+  width: 80%;
 }
 
 .sidebar {
-    border-right: 1px solid #333; // Darker border for subtle separation
-    height: 100vh;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; // Align items to the top
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px; // Slightly smaller font for modern look
-    position: sticky;
-    top: 0;
-    left: 0;
-    padding: 20px; // Add padding for spacing
+  border-right: 1px solid #333; // Darker border for subtle separation
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; // Align items to the top
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; // Slightly smaller font for modern look
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 20px; // Add padding for spacing
 }
 
 .sidebar a {
-    color: white;
+  color: white;
 }
 
-
 .sidebar h6 {
-    margin: 20px 0 10px 0; // Add spacing around headings
-    color: gray;
-    font-weight: 700;
+  margin: 20px 0 10px 0; // Add spacing around headings
+  color: gray;
+  font-weight: 700;
 }
 
 .sidebar i {
-    margin-right: 10px; // Space between icon and text
+  margin-right: 10px; // Space between icon and text
 }
 
 .content {
-    background-color: #1c1c1c; 
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    color: white;
+  background-color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white;
 }
 
 .content-body {
-    margin-top: 80px; // Add margin to push content below fixed nav
-    padding: 20px;
+  margin-top: 80px; // Add margin to push content below fixed nav
+  padding: 20px;
 }
 
 .nav-item:hover {
-    background-color: #333; // Darker background on hover
-    cursor: pointer;
-    border-radius: 5px; // Slightly rounded corners
-    transition: background-color 0.3s; // Smooth transition on hover
+  background-color: #333; // Darker background on hover
+  cursor: pointer;
+  border-radius: 5px; // Slightly rounded corners
+  transition: background-color 0.3s; // Smooth transition on hover
 }
-.active{
-    background-color: #E50914; 
-    cursor: pointer;
-    border-radius: 5px; // Slightly rounded corners
-    transition: background-color 0.3s; // Smooth transition on hover
+.active {
+  background-color: #e50914;
+  cursor: pointer;
+  border-radius: 5px; // Slightly rounded corners
+  transition: background-color 0.3s; // Smooth transition on hover
 }
 
-.movie-container{
-    width: 350px;
-    position: relative;
+.movie-container {
+  width: auto; // Override previous fixed width
+  position: relative;
 }
 
 .image {
+  width: 100%;
+  position: relative;
+
+  img {
     width: 100%;
-    position: relative;
-    
-    img {
-        width: 100%;
-        height: 450px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
 }
 
 .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
-    border-radius: 0 0 8px 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  border-radius: 0 0 8px 8px;
 }
 
 .movie-footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .movie-info {
-    margin-bottom: 20px;
-    h6 {
-        margin: 0;
-        font-size: 1.2rem;
-    }
-    p, span {
-        margin: 5px 0;
-        font-size: 0.9rem;
-        opacity: 0.8;
-    }
+  margin-bottom: 20px;
+  h6 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  p,
+  span {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
 }
 
 .movie-btns {
+  display: flex;
+  gap: 10px;
+
+  button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: #e50914;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.movie-container img {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.trend-movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  .movies-row {
     display: flex;
-    gap: 10px;
-    
-    button {
-        padding: 8px 16px;
-        border: none;
-        border-radius: 4px;
-        background: #E50914;
-        color: white;
-        cursor: pointer;
-        
-    }
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .movie-container {
+    flex: 0 0 calc(25% - 15px); // 25% width for 4 items per row, accounting for gap
+    max-width: calc(25% - 15px);
+    transition: transform 0.3s;
+  }
+
+  .movie-container:hover {
+    transform: scale(1.09);
+  }
 }
 
-.movie-container img{
-    width: 100%;
-    background-size: cover;
-    background-position: center;
+.cr{
+    cursor: pointer;
 }
-
-.div1{
-    width: 100%;
-    background-color: #E50914;
-
-}
-

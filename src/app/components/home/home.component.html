@@ -2,9 +2,9 @@
   <div class="home-container">
     <div class="col-2 sidebar">
       <div class="logo">
-        <img src="../../../assets/images/Netflix_Logo_RGB.png" alt="logo">
+        <img src="../../../assets/images/Netflix_Logo_RGB.png" alt="logo" />
       </div>
-      <hr>
+      <hr />
       <div class="menu">
         <ul class="nav flex-column">
           <h6>Menu</h6>
@@ -14,23 +14,35 @@
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="discovery" class="nav-link" routerLinkActive="active">
+            <a
+              routerLink="discovery"
+              class="nav-link"
+              routerLinkActive="active"
+            >
               <span><i class="fas fa-search"></i> Discovery</span>
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="community" class="nav-link" routerLinkActive="active">
+            <a
+              routerLink="community"
+              class="nav-link"
+              routerLinkActive="active"
+            >
               <span><i class="fas fa-users"></i> Community</span>
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="coming soon" class="nav-link" routerLinkActive="active">
+            <a
+              routerLink="coming soon"
+              class="nav-link"
+              routerLinkActive="active"
+            >
               <span><i class="fas fa-calendar-alt"></i> Coming soon</span>
             </a>
           </li>
         </ul>
       </div>
-      <hr>
+      <hr />
       <div class="library">
         <ul class="nav flex-column">
           <h6>Library</h6>
@@ -40,23 +52,35 @@
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="bookmarked" class="nav-link" routerLinkActive="active">
+            <a
+              routerLink="bookmarked"
+              class="nav-link"
+              routerLinkActive="active"
+            >
               <span><i class="fas fa-bookmark"></i> Bookmarked</span>
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="top-rated" class="nav-link" routerLinkActive="active">
+            <a
+              routerLink="top-rated"
+              class="nav-link"
+              routerLinkActive="active"
+            >
               <span><i class="fas fa-star"></i> Top Rated</span>
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="downloads" class="nav-link" routerLinkActive="active">
+            <a
+              routerLink="downloads"
+              class="nav-link"
+              routerLinkActive="active"
+            >
               <span><i class="fas fa-download"></i> Downloads</span>
             </a>
           </li>
         </ul>
       </div>
-      <hr>
+      <hr />
       <div class="settings">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -81,17 +105,17 @@
     <div class="col-10 content">
       <app-nav></app-nav>
       <div class="content-body">
+        <h4>Trending Movies</h4>
         <div class="trend-movies">
-          <h4>Trending Movies</h4>
-          <div class="movie-container">
+          <div class="movie-container cr" *ngFor="let movie of movies">
             <div class="image">
-              <img src="../../../assets/images/download (1).jpg" alt="">
+              <img [src]="image_path + movie.poster_path" [alt]="movie.title" />
               <div class="overlay">
                 <div class="movie-footer">
                   <div class="movie-info">
-                    <h6>La casa de papel</h6>
-                    <p>2020</p>
-                    <span>7.9 rate</span>
+                    <h6>{{ movie.title }}</h6>
+                    <p>{{ movie.release_date | date : "yyyy" }}</p>
+                    <span>{{ movie.vote_average }} rate</span>
                   </div>
                   <div class="movie-btns">
                     <button>Watch now</button>

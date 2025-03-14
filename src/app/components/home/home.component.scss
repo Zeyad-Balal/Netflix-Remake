@@ -65,43 +65,47 @@
 .movie-container {
   width: auto; // Override previous fixed width
   position: relative;
+  border-radius: 8px; // Add border radius for rounded corners
+  box-shadow: 5px 5px 8px rgba(224, 76, 76, 0.2); // Add shadow for depth
 }
 
 .image {
   width: 100%;
   position: relative;
+  overflow: hidden;
 
   img {
     width: 100%;
-    height: 450px;
+    height: 400px; // Reduced from 450px
     object-fit: cover;
     border-radius: 8px;
   }
 }
-
+.image:hover .movie-btns {
+  transform: translateY(0);
+}
 .overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px;
+  padding: 15px; // Reduced from 20px for better proportion
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
   border-radius: 0 0 8px 8px;
 }
 
 .movie-footer {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
 }
 
 .movie-info {
-  margin-bottom: 20px;
+  margin-bottom: 15px; // Reduced from 20px
   h6 {
     margin: 0;
-    font-size: 1.2rem;
+    // font-size: 1.2rem;
   }
   p,
   span {
@@ -109,19 +113,62 @@
     font-size: 0.9rem;
     opacity: 0.8;
   }
+  span {
+    i {
+      font-size: 10px;
+      margin-left: 4px;
+      &.filled {
+        color: #ffd700;
+      }
+      &.empty {
+        color: #808080;
+      }
+    }
+  }
 }
 
 .movie-btns {
   display: flex;
-  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  transform: translateY(150%);
+  opacity: 0.9;
+  transition: transform 0.5s;
+  text-align: center;
 
   button {
-    padding: 8px 16px;
+    margin-bottom: 10px; // Reduced from 15px
+    padding: 4px 8px;
     border: none;
     border-radius: 4px;
     background: #e50914;
     color: white;
     cursor: pointer;
+    font-size: 12px;
+  }
+
+  .watch-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    i {
+      font-size: 10px;
+    }
+  }
+
+  #plus-btn {
+    padding: 4px 6px;
+    min-width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #7c6c6cc4;
+
+    i {
+      font-size: 10px;
+    }
   }
 }
 
@@ -145,14 +192,48 @@
   .movie-container {
     flex: 0 0 calc(25% - 15px); // 25% width for 4 items per row, accounting for gap
     max-width: calc(25% - 15px);
-    transition: transform 0.3s;
+    transition: transform 0.5s;
   }
 
   .movie-container:hover {
-    transform: scale(1.09);
+    transform: scale(1.04);
+  }
+  width: 100%;
+  padding: 20px 0;
+
+  ::ng-deep .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+
+    button {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5) !important;
+      color: white !important;
+      width: 40px;
+      height: 40px;
+      border-radius: 50% !important;
+
+      &.owl-prev {
+        left: -20px;
+      }
+
+      &.owl-next {
+        right: -20px;
+      }
+
+      &:hover {
+        background: rgba(229, 9, 20, 0.8) !important;
+      }
+    }
+  }
+
+  .movie-container {
+    padding: 0 10px;
   }
 }
 
-.cr{
-    cursor: pointer;
+.cr {
+  cursor: pointer;
 }

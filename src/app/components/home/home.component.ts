@@ -6,6 +6,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NavComponent } from '../nav/nav.component';
 import { IMovie, MovieResponse } from '../../core/interfaces/imovie';
 import { environment } from '../../core/environments/env';
+import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ import { environment } from '../../core/environments/env';
   imports: [
     FormsModule,
     CommonModule,
-    RouterOutlet,
+    CarouselModule,
+    // RouterOutlet,
     RouterLink,
     RouterLinkActive,
     NavComponent,
@@ -27,6 +29,31 @@ export class HomeComponent implements OnInit {
 
   constructor(private readonly _HomeService: HomeService) {}
 
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
+  }
+
   ngOnInit(): void {
     this._HomeService.getAllMovies().subscribe({
       next: (response: MovieResponse) => {
@@ -34,5 +61,13 @@ export class HomeComponent implements OnInit {
         console.log(this.movies);
       },
     });
+  }
+
+  getStarRating(rating: number): number[] {
+    // Convert 10-point scale to 5-point scale
+    const fiveStarRating = Math.round(rating / 2);
+    return Array(5)
+      .fill(0)
+      .map((_, index) => (index < fiveStarRating ? 1 : 0));
   }
 }

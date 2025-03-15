@@ -47,6 +47,39 @@
 .content-body {
   margin-top: 80px; // Add margin to push content below fixed nav
   padding: 20px;
+  position: relative;
+  background: linear-gradient(180deg, #141414 0%, #0a0a0a 100%);
+  padding: 2rem;
+  margin-top: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(
+      to bottom,
+      rgba(20, 20, 20, 0.8) 0%,
+      transparent 100%
+    );
+    pointer-events: none;
+  }
+
+  .section-title {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 1.5rem;
+
+    h4 {
+      background: linear-gradient(45deg, #fff, #ccc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
 }
 
 .nav-item:hover {
@@ -242,6 +275,26 @@
 
 .trending-slider {
   padding: 20px 0;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(
+    rgba(26, 26, 26, 0.6) 0%,
+    rgba(26, 26, 26, 0.4) 100%
+  );
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
 
   ::ng-deep {
     .owl-stage {
@@ -395,6 +448,181 @@
             &:hover::after {
               transform: translateY(-50%) scale(1.2);
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+.hero-section {
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  margin-bottom: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: radial-gradient(
+      circle at top right,
+      rgba(229, 9, 20, 0.2) 0%,
+      rgba(74, 42, 150, 0.2) 50%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  .hero-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+
+    .gradient-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+          90deg,
+          rgba(20, 20, 20, 0.95) 0%,
+          rgba(20, 20, 20, 0.8) 50%,
+          rgba(20, 20, 20, 0.6) 100%
+        ),
+        linear-gradient(
+          0deg,
+          #141414 0%,
+          transparent 50%,
+          rgba(229, 9, 20, 0.1) 100%
+        );
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 0 4rem;
+
+    .poster-container {
+      // flex-shrink: 0;
+
+      .movie-poster {
+        width: 300px;
+        // height: 450px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+
+    .movie-details {
+      max-width: 600px;
+
+      .movie-metadata {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        // margin-bottom: 1rem;
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: #fff;
+          font-size: 0.9rem;
+
+          i {
+            color: #ffd700;
+          }
+        }
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: linear-gradient(to right, #fff, #ccc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .overview {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #ccc;
+        margin-bottom: 1.5rem;
+      }
+
+      .genre-tags {
+        display: flex;
+        gap: 0.8rem;
+        margin-bottom: 2rem;
+
+        .tag {
+          padding: 0.4rem 1rem;
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(8px);
+          border-radius: 20px;
+          font-size: 0.9rem;
+          color: #fff;
+        }
+      }
+
+      .hero-btns {
+        display: flex;
+        gap: 1rem;
+
+        button {
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+          padding: 0.8rem 2rem;
+          border: none;
+          border-radius: 8px;
+          font-size: 1rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+
+        .watch-btn {
+          background: #e50914;
+          color: white;
+
+          &:hover {
+            background: darken(#e50914, 5%);
+          }
+        }
+
+        .info-btn {
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(8px);
+          color: white;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
           }
         }
       }

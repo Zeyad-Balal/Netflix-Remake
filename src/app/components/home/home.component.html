@@ -104,6 +104,56 @@
     <!-- content -->
     <div class="col-10 content">
       <app-nav></app-nav>
+
+      <div class="hero-section" *ngIf="movies.length > 0">
+        <div
+          class="hero-backdrop"
+          [style.backgroundImage]="
+            'url(' + image_path + movies[14].backdrop_path + ')'
+          "
+        >
+          <div class="gradient-overlay"></div>
+        </div>
+        <div class="hero-content">
+          <div class="poster-container">
+            <img
+              [src]="image_path + movies[14].poster_path"
+              [alt]="movies[14].title"
+              class="movie-poster"
+            />
+          </div>
+          <div class="movie-details">
+            <div class="movie-metadata">
+              <span class="rating">
+                <i class="fa-solid fa-star"></i>
+                {{ movies[14].vote_average | number : "1.1-1" }}
+              </span>
+              <span class="year">{{
+                movies[14].release_date | date : "yyyy"
+              }}</span>
+              <span class="duration">2h 15m</span>
+            </div>
+            <h1>{{ movies[14].title }}</h1>
+            <p class="overview">{{ movies[14].overview }}</p>
+            <div class="genre-tags">
+              <span class="tag">Action</span>
+              <span class="tag">Adventure</span>
+              <span class="tag">Sci-Fi</span>
+            </div>
+            <div class="hero-btns">
+              <button class="watch-btn">
+                <i class="fa-solid fa-play"></i>
+                <span>Watch now</span>
+              </button>
+              <button class="info-btn">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>More info</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="content-body">
         <div class="section-title">
           <h4>Trending Movies</h4>

@@ -105,9 +105,13 @@
     <div class="col-10 content">
       <app-nav></app-nav>
       <div class="content-body">
-        <h4>Trending Movies</h4>
+        <div class="section-title">
+          <h4>Trending Movies</h4>
+          <span>See all <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+
         <div class="trending-slider cr">
-          <owl-carousel-o [options]="customOptions">
+          <owl-carousel-o [options]="customOptions_trending">
             @for(movie of movies ; track movie.id){
             <ng-template carouselSlide>
               <div class="image">
@@ -146,10 +150,141 @@
           </owl-carousel-o>
         </div>
 
+        <!-- continue watching -->
+        <div class="section-title">
+          <h4>Continue watching</h4>
+          <span>See all <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+
+        <div class="trending-slider continue-watching cr">
+          <owl-carousel-o [options]="customOptions_continue_watching">
+            @for(movie of movies ; track movie.id){
+            <ng-template carouselSlide>
+              <div class="image">
+                <img
+                  [src]="image_path + movie.poster_path"
+                  [alt]="movie.title"
+                />
+                <div class="play-overlay">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="overlay">
+                  <div class="movie-footer">
+                    <div class="movie-info">
+                      <h6>{{ movie.title }}</h6>
+                      <p>{{ movie.release_date | date : "yyyy" }}</p>
+                      <span>
+                        {{ movie.vote_average | number : "1.1-1" }}
+                        <i
+                          *ngFor="let star of getStarRating(movie.vote_average)"
+                          class="fa-solid fa-star"
+                          [ngClass]="{ filled: star === 1, empty: star === 0 }"
+                        >
+                        </i>
+                      </span>
+                    </div>
+                    <div class="progress-container">
+                      <span class="time current">45:30</span>
+                      <div class="progress-bar"></div>
+                      <span class="time total">1:25:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            }
+          </owl-carousel-o>
+        </div>
+
+        <!-- <div class="trending-slider cr">
+          <owl-carousel-o [options]="customOptions">
+            @for(movie of movies ; track movie.id){
+            <ng-template carouselSlide>
+              <div class="image">
+                <img
+                  [src]="image_path + movie.poster_path"
+                  [alt]="movie.title"
+                />
+                <div class="overlay">
+                  <div class="movie-footer">
+                    <div class="movie-info">
+                      <h6>{{ movie.title }}</h6>
+                      <p>{{ movie.release_date | date : "yyyy" }}</p>
+                      <span>
+                        {{ movie.vote_average | number : "1.1-1" }}
+                        <i
+                          *ngFor="let star of getStarRating(movie.vote_average)"
+                          class="fa-solid fa-star"
+                          [ngClass]="{ filled: star === 1, empty: star === 0 }"
+                        >
+                        </i>
+                      </span>
+                    </div>
+                    <div class="movie-btns">
+                      <button class="watch-btn">
+                        <i class="fa-solid fa-play"></i> Watch now
+                      </button>
+                      <button id="plus-btn">
+                        <i class="fa-solid fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            }
+          </owl-carousel-o>
+        </div> -->
+
+        <!-- Top rated -->
+        <!-- <div class="section-title">
+          <h4 class="top-rate">Top Rated <i class="fa-solid fa-star"></i></h4>
+          <span>See all <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+        <div class="trending-slider cr">
+          <owl-carousel-o [options]="customOptions">
+            @for(movie of movies ; track movie.id){
+            <ng-template carouselSlide>
+              <div class="image">
+                <img
+                  [src]="image_path + movie.poster_path"
+                  [alt]="movie.title"
+                />
+                <div class="overlay">
+                  <div class="movie-footer">
+                    <div class="movie-info">
+                      <h6>{{ movie.title }}</h6>
+                      <p>{{ movie.release_date | date : "yyyy" }}</p>
+                      <span>
+                        {{ movie.vote_average | number : "1.1-1" }}
+                        <i
+                          *ngFor="let star of getStarRating(movie.vote_average)"
+                          class="fa-solid fa-star"
+                          [ngClass]="{ filled: star === 1, empty: star === 0 }"
+                        >
+                        </i>
+                      </span>
+                    </div>
+                    <div class="movie-btns">
+                      <button class="watch-btn">
+                        <i class="fa-solid fa-play"></i> Watch now
+                      </button>
+                      <button id="plus-btn">
+                        <i class="fa-solid fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            }
+          </owl-carousel-o>
+        </div> -->
+
         <!-- will replaced to use as continue watching movies feat -->
-        <div class="trend-movies">
+        <!-- <div class="trend-movies">
           <div class="movie-container cr" *ngFor="let movie of movies">
-            <!-- <div class="image">
+            <div class="image">
               <img [src]="image_path + movie.poster_path" [alt]="movie.title" />
               <div class="overlay">
                 <div class="movie-footer">
@@ -176,9 +311,9 @@
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

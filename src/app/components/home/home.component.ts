@@ -29,7 +29,38 @@ export class HomeComponent implements OnInit {
 
   constructor(private readonly _HomeService: HomeService) {}
 
-  customOptions: OwlOptions = {
+  customOptions_continue_watching: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    // autoplay: true,
+    // autoplayTimeout: 2000,
+    // autoplayHoverPause: true,
+    navText: [
+      '<i class="fa-solid fa-chevron-left"></i>',
+      '<i class="fa-solid fa-chevron-right"></i>',
+    ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      400: {
+        items: 2,
+      },
+      740: {
+        items: 3,
+      },
+      940: {
+        items: 5,
+      },
+    },
+    nav: false,
+  };
+
+  customOptions_trending: OwlOptions = {
     loop: true,
     mouseDrag: true,
     touchDrag: true,
@@ -37,7 +68,7 @@ export class HomeComponent implements OnInit {
     dots: true,
     navSpeed: 700,
     autoplay: true,
-    autoplayTimeout: 2000,
+    autoplayTimeout:5000,
     autoplayHoverPause: true,
     navText: [
       '<i class="fa-solid fa-chevron-left"></i>',
@@ -54,12 +85,11 @@ export class HomeComponent implements OnInit {
         items: 3,
       },
       940: {
-        items: 4,
+        items: 5,
       },
     },
     nav: false,
   };
-
   ngOnInit(): void {
     this._HomeService.getAllMovies().subscribe({
       next: (response: MovieResponse) => {

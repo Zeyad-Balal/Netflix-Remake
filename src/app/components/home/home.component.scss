@@ -407,46 +407,32 @@
 
         .progress-container {
           width: 100%;
-          height: 6px; // Increased from 4px
-          background: rgba(255, 255, 255, 0.2);
-          border-radius: 3px;
+          height: 4px; // Reduced from 4px
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 1px;
           overflow: visible;
           position: relative;
-          margin: 20px 0 10px;
+          margin: 5px 0; // Reduced margins
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 8px;
 
           .time {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.7);
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.6);
             flex-shrink: 0;
           }
 
           .progress-bar {
             flex-grow: 1;
             height: 100%;
-            background: rgb(255, 255, 255); // Changed to solid white
-            border-radius: 3px;
+            background: #e50914;
+            border-radius: 1px;
             position: relative;
+            width: 45%; // This represents progress - adjust as needed
 
-            &::after {
-              content: "";
-              position: absolute;
-              right: -8px; // Adjusted for larger circle
-              top: 50%;
-              transform: translateY(-50%);
-              width: 20px; // Increased from 16px
-              height: 20px; // Increased from 16px
-              background: white;
-              border-radius: 50%;
-              box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-              cursor: pointer;
-              transition: transform 0.2s ease;
-            }
-
-            &:hover::after {
-              transform: translateY(-50%) scale(1.2);
+            &:hover {
+              background: lighten(#e50914, 10%);
             }
           }
         }

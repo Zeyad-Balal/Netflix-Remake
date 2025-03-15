@@ -234,6 +234,34 @@
   }
 }
 
+.trending-slider {
+  padding: 20px 0;
+
+  ::ng-deep {
+    .owl-stage {
+      display: flex;
+      gap: 10px; // Add gap between slides
+
+      .owl-item {
+        display: flex;
+
+        .image {
+          width: 280px; // Set fixed width for consistent sizing
+          margin: 0 10px; // Add some horizontal spacing
+          box-shadow: 10px 10px 25px rgba(224, 76, 76, 0.2); // Add shadow for depth
+
+          img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .cr {
   cursor: pointer;
 }

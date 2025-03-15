@@ -31,28 +31,34 @@ export class HomeComponent implements OnInit {
 
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
+    mouseDrag: true,
+    touchDrag: true,
     pullDrag: false,
-    dots: false,
+    dots: true,
     navSpeed: 700,
-    navText: ['', ''],
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    navText: [
+      '<i class="fa-solid fa-chevron-left"></i>',
+      '<i class="fa-solid fa-chevron-right"></i>',
+    ],
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       400: {
-        items: 2
+        items: 2,
       },
       740: {
-        items: 3
+        items: 3,
       },
       940: {
-        items: 4
-      }
+        items: 4,
+      },
     },
-    nav: true
-  }
+    nav: false,
+  };
 
   ngOnInit(): void {
     this._HomeService.getAllMovies().subscribe({

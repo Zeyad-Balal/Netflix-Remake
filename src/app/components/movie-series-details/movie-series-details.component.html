@@ -1,0 +1,60 @@
+<!-- <app-nav></app-nav> -->
+<section class="movie-details-container">
+    <div class="image-box" *ngIf="movieDetails">
+        <img [src]="image_path + movieDetails.backdrop_path" 
+             [alt]="movieDetails.title + ' poster'"
+             loading="eager"
+             decoding="async"
+             fetchpriority="high">
+        <div class="overlay"></div>
+        <div class="content-wrapper">
+            <div class="poster">
+                <img [src]="image_path + movieDetails.poster_path" [alt]="movieDetails.title">
+            </div>
+            <div class="info-content">
+                <h1>{{movieDetails.title}}</h1>
+                <p class="tagline">{{movieDetails.tagline}}</p>
+                <div class="meta-info">
+                    <span class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        {{movieDetails.vote_average | number:'1.1-1'}}
+                    </span>
+                    <span class="year">{{movieDetails.release_date | date:'yyyy'}}</span>
+                    <span class="duration">{{movieDetails.runtime}} min</span>
+                </div>
+                
+                <div class="genres">
+                    <span *ngFor="let genre of movieDetails.genres">{{genre.name}}</span>
+                </div>
+
+                <p class="overview">{{movieDetails.overview}}</p>
+
+                <div class="actions">
+                    <button class="primary-btn">
+                        <i class="fa-solid fa-play"></i>
+                        Watch Now
+                    </button>
+                    <button class="secondary-btn">
+                        <i class="fa-solid fa-plus"></i>
+                        Add to List
+                    </button>
+                </div>
+
+                <div class="additional-info">
+                    <div class="info-item">
+                        <label>Released:</label>
+                        <span>{{movieDetails.release_date | date:'mediumDate'}}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Budget:</label>
+                        <span>{{movieDetails.budget | currency}}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Revenue:</label>
+                        <span>{{movieDetails.revenue | currency}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

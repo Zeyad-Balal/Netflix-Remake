@@ -24,10 +24,10 @@ export class HomeService {
     );
   }
 
-  // searchOnMovie(query: string): Observable<MovieResponse> {
-  //   return this._HttpClient.get<MovieResponse>(
-  //     `${environment.base_url}search/movie?query=${query}&language=en-US&page=1`,
-  //     { headers: this.headers }
-  //   );
-  // }
+  searchOnMovie(query: string): Observable<MovieResponse> {
+    return this._HttpClient.get<MovieResponse>(
+      `${environment.base_url}search/movie?query=${query}&language=en-US&page=1`,
+      { headers: this.headers }
+    );
+  }
 }

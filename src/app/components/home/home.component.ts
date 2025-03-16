@@ -26,7 +26,7 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 export class HomeComponent implements OnInit {
   movies: IMovie[] = [];
   image_path = environment.image_url;
-  // search_value: string = '';
+  query: string = '';
 
   constructor(private readonly _HomeService: HomeService) {}
 
@@ -100,17 +100,17 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  // onSearch(query: string) {
-  //   if (query.trim()) {
-  //     this._HomeService.searchOnMovie(query).subscribe({
-  //       next: (res) => {
-  //         // this.movies = res.results;
+  onSearch() {
+    if (this.query.trim()) {
+      this._HomeService.searchOnMovie(this.query).subscribe({
+        next: (res) => {
+          // this.movies = res.results;
 
-  //         console.log(res);
-  //       }
-  //     });
-  //   }
-  // }
+          console.log(res);
+        }
+      });
+    }
+  }
 
   getStarRating(rating: number): number[] {
     // Convert 10-point scale to 5-point scale

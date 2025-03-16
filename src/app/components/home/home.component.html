@@ -155,17 +155,17 @@
         </div>
       </div>
 
-      <!-- <div class="search">
+      <div class="search">
         <input 
           type="text" 
           placeholder="Search for movies, series, and more" 
-          [(ngModel)]="search_value"
-          (keyup.enter)="onSearch(search_value)"
+          [(ngModel)]="query"
+          (keyup.enter)="onSearch()"
         />
-        <button class="search-btn" (click)="onSearch(search_value)">
+        <button class="search-btn" (click)="onSearch()">
           <i class="fa-solid fa-search"></i>
         </button>
-      </div> -->
+      </div>
 
       <div class="content-body">
         <div class="section-title">

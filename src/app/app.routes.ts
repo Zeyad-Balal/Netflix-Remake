@@ -28,11 +28,11 @@ export const routes: Routes = [
     component: HomeComponent,
     title: 'Home',
     children: [
-      {
-        path: 'movies',
-        component: MovieSeriesDetailsComponent,
-        title: 'Movies',
-      }
+      // {
+      //   path: 'movies',
+      //   component: MovieSeriesDetailsComponent,
+      //   title: 'Movies',
+      // }
     ]
   },
   {
@@ -50,4 +50,9 @@ export const routes: Routes = [
     component: WatchListComponent,
     title: 'watch list',
   },
+  {
+    path: 'details/:id',
+    component: MovieSeriesDetailsComponent,
+    title: 'Movies',
+  }
 ];

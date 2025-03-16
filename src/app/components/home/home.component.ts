@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
         items: 5,
       },
     },
-    nav: false,
+    nav: true,
   };
 
   customOptions_trending: OwlOptions = {
@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
-    dots: true,
+    dots: false,
     navSpeed: 700,
     autoplay: true,
     autoplayTimeout:5000,
@@ -88,7 +88,7 @@ export class HomeComponent implements OnInit {
         items: 5,
       },
     },
-    nav: false,
+    nav: true,
   };
   ngOnInit(): void {
     this._HomeService.getAllMovies().subscribe({

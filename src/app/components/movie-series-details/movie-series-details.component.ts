@@ -28,7 +28,6 @@ export class MovieSeriesDetailsComponent implements OnInit {
         console.log(res);
       });
     }
-
   }
-
+  
 }

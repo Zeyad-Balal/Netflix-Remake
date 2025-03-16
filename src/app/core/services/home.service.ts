@@ -8,15 +8,26 @@ import { MovieResponse } from '../interfaces/imovie';
   providedIn: 'root',
 })
 export class HomeService {
-  constructor(private _HttpClient: HttpClient) {}
+  private headers: HttpHeaders;
+
+  constructor(private _HttpClient: HttpClient) {
+    this.headers = new HttpHeaders({
+      Authorization: `Bearer ${environment.token}`,
+      accept: 'application/json'
+    });
+  }
 
   getAllMovies(): Observable<MovieResponse> {
-    const headers = new HttpHeaders({
-      Authorization: `Bearer ${environment.token}`,
-    });
     return this._HttpClient.get<MovieResponse>(
       `${environment.base_url}movie/popular?${environment.token}&language=en-US&sort_by=popularity.desc&page=1`,
-      { headers }
+      { headers: this.headers }
     );
   }
+
+  // searchOnMovie(query: string): Observable<MovieResponse> {
+  //   return this._HttpClient.get<MovieResponse>(
+  //     `${environment.base_url}search/movie?query=${query}&language=en-US&page=1`,
+  //     { headers: this.headers }
+  //   );
+  // }
 }

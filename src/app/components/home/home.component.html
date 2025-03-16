@@ -105,9 +105,10 @@
     <div class="col-10 content">
       <app-nav></app-nav>
 
-      <div class="hero-section" *ngIf="movies.length > 0">
+      <div class="hero-section cr"   [routerLink]="['/details', movies[14].id]" *ngIf="movies.length > 0">
         <div
-          class="hero-backdrop"
+       
+          class="hero-backdrop "
           [style.backgroundImage]="
             'url(' + image_path + movies[14].backdrop_path + ')'
           "
@@ -153,6 +154,18 @@
           </div>
         </div>
       </div>
+
+      <!-- <div class="search">
+        <input 
+          type="text" 
+          placeholder="Search for movies, series, and more" 
+          [(ngModel)]="search_value"
+          (keyup.enter)="onSearch(search_value)"
+        />
+        <button class="search-btn" (click)="onSearch(search_value)">
+          <i class="fa-solid fa-search"></i>
+        </button>
+      </div> -->
 
       <div class="content-body">
         <div class="section-title">

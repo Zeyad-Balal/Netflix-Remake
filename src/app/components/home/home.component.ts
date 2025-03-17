@@ -104,8 +104,7 @@ export class HomeComponent implements OnInit {
     if (this.query.trim()) {
       this._HomeService.searchOnMovie(this.query).subscribe({
         next: (res) => {
-          // this.movies = res.results;
-
+          this.movies = res.results;
           console.log(res);
         }
       });

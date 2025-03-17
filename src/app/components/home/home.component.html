@@ -158,12 +158,12 @@
       <div class="search">
         <input 
           type="text" 
-          placeholder="Search for movies, series, and more" 
+          placeholder="Search for movies, TV shows, and more..." 
           [(ngModel)]="query"
-          (keyup.enter)="onSearch()"
+          (ngModelChange)="onSearch()"
         />
-        <button class="search-btn" (click)="onSearch()">
-          <i class="fa-solid fa-search"></i>
+        <button class="search-btn">
+          <i class="fas fa-search"></i>
         </button>
       </div>
 

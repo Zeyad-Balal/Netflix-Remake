@@ -1,0 +1,74 @@
+<section class="fluid-container">
+  <div class="home-container">
+    <div class="col-2">
+      <app-side-menu></app-side-menu>
+    </div>
+    <div class="col-10 content">
+      <app-nav></app-nav>
+      <section class="upcoming-section">
+        <div class="hero-banner" *ngIf="upcomingMovies.length > 0">
+          <div class="backdrop" [style.backgroundImage]="'url(' + image_path + upcomingMovies[0].backdrop_path + ')'">
+            <div class="gradient-overlay"></div>
+          </div>
+          <div class="hero-content">
+            <div class="header-nav">
+              <h1>Upcoming Releases</h1>
+            </div>
+            <div class="featured-movie">
+              <h2>{{upcomingMovies[0].title}}</h2>
+              <p class="release-date">Release Date: {{upcomingMovies[0].release_date | date:'MMMM d, y'}}</p>
+              <p class="overview">{{upcomingMovies[0].overview}}</p>
+              <div class="actions">
+                <button class="remind-btn">
+                  <i class="fa-solid fa-bell"></i> Set Reminder
+                </button>
+                <button class="info-btn">
+                  <i class="fa-solid fa-play"></i> Watch Trailer
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <div class="movies-grid">
+            <div *ngFor="let movie of upcomingMovies" class="movie-card" [routerLink]="['/details', movie.id]">
+              <div class="poster">
+                <img [src]="image_path + movie.poster_path" [alt]="movie.title">
+                <div class="overlay">
+                  <div class="movie-info">
+                    <h3>{{movie.title}}</h3>
+                    <div class="meta">
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>{{movie.vote_average | number:'1.1-1'}}</span>
+                      </div>
+                      <div class="release">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>{{movie.release_date | date:'MMM d, y'}}</span>
+                      </div>
+                    </div>
+                    <p class="overview">{{movie.overview | slice:0:100}}...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pagination">
+            <button class="nav-btn" [disabled]="currentPage === 1" (click)="previousPage()">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="pages">
+              <span class="current">{{currentPage}}</span>
+              <span class="total">of {{totalPages}}</span>
+            </div>
+            <button class="nav-btn" [disabled]="currentPage === totalPages" (click)="nextPage()">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

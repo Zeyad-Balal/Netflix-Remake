@@ -1,55 +1,77 @@
-<!-- <section>
-  <div class="side-menu-body">
-    <div class="side-menu-header">
-      <h1>Netflix<span id="main-title">.Remake</span></h1>
-      <span class="side-menu-titles">News feed</span>
-    </div>
-    <div>
-      <ul class="side-menu-feed-items">
-        <li routerLinkActive="active-link">
-          <span class="icons"> <i class="fa-solid fa-compass"></i></span>
-          <a routerLink="home">Home</a>
-        </li>
-        <li routerLinkActive="active-link">
-          <span class="icons"> <i class="fa-solid fa-film"></i></span>
-          <a routerLink="movies">Movies</a>
-        </li>
-        <li routerLinkActive="active-link">
-          <span class="icons"> <i class="fa-solid fa-video"></i></span>
-          <a>TV shows</a>
-        </li>
-        <li routerLinkActive="active-link">
-          <span class="icons"><i class="fa-solid fa-eye"></i></span>
-          <a routerLink="watch-list">Watchlist</a>
-        </li>
-        <li routerLinkActive="active-link">
-          <span class="icons"> <i class="fa-regular fa-clock"></i> </span>
-          <a>Coming soon</a>
-        </li>
-        <li routerLinkActive="active-link">
-          <span class="icons"> <i class="fa-solid fa-file-contract"></i></span>
-          <a routerLink="plans">Plans</a>
-        </li>
-        <hr />
-      </ul>
-    </div>
-
-    <div>
-      <ul class="side-menu-settings-items">
-        <span class="side-menu-titles">Privacy & Safety</span>
-        <li routerLinkActive="active-link">
-          <span class="icons"> <i class="fa-solid fa-user"></i></span>
-          <a routerLink="profile">Profile</a>
-        </li>
-        <li routerLinkActive="active-link">
-          <span class="icons"> <i class="fa-solid fa-cog"></i></span>
-          <a routerLink="settings">Settings</a>
-        </li>
-        <li routerLinkActive="active-link">
-          <span class="icons"> <i class="fa-solid fa-sign-out"></i></span>
-          <a routerLink="logout">Logout</a>
-        </li>
-      </ul>
-    </div>
+<div class="sidebar">
+  <div class="logo">
+    <img src="../../../assets/images/Netflix_Logo_RGB.png" alt="logo" />
   </div>
-</section> -->
+  <hr />
+  <div class="menu">
+    <ul class="nav flex-column">
+      <h6>Menu</h6>
+      <li class="nav-item">
+        <a routerLink="/home" class="nav-link" routerLinkActive="active">
+          <span><i class="fas fa-home"></i> Home</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="discovery" class="nav-link" routerLinkActive="active">
+          <span><i class="fas fa-search"></i> Discovery</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="community" class="nav-link" routerLinkActive="active">
+          <span><i class="fas fa-users"></i> Community</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/up-coming" class="nav-link" routerLinkActive="active">
+          <span><i class="fas fa-calendar-alt"></i> Coming soon</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <hr />
+  <div class="library">
+    <ul class="nav flex-column">
+      <h6>Library</h6>
+      <li class="nav-item">
+        <a routerLink="recent" class="nav-link" routerLinkActive="active">
+          <span><i class="fas fa-clock"></i> Recent</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="bookmarked" class="nav-link" routerLinkActive="active">
+          <span><i class="fas fa-bookmark"></i> Bookmarked</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="top-rated" class="nav-link" routerLinkActive="active">
+          <span><i class="fas fa-star"></i> Top Rated</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="downloads" class="nav-link" routerLinkActive="active">
+          <span><i class="fas fa-download"></i> Downloads</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <hr />
+  <div class="settings">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a routerLink="settings" class="nav-link" routerLinkActive="active">
+          <span><i class="fas fa-cog"></i> Settings</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="help" class="nav-link" routerLinkActive="active">
+          <span><i class="fas fa-question-circle"></i> Help</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="logout" class="nav-link" routerLinkActive="active">
+          <span><i class="fas fa-sign-out-alt"></i> Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

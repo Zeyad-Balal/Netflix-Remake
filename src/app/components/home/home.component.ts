@@ -7,6 +7,7 @@ import { NavComponent } from '../nav/nav.component';
 import { IMovie, MovieResponse } from '../../core/interfaces/imovie';
 import { environment } from '../../core/environments/env';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { SideMenuComponent } from '../side-menu/side-menu.component';
 
 @Component({
   selector: 'app-home',
@@ -19,9 +20,10 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
     RouterLink,
     RouterLinkActive,
     NavComponent,
+    SideMenuComponent,
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
   movies: IMovie[] = [];

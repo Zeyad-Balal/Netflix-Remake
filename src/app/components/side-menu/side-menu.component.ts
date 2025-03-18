@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-side-menu',
-  standalone: true,
-  imports: [RouterLink,RouterLinkActive],
   templateUrl: './side-menu.component.html',
-  styleUrl: './side-menu.component.scss'
+  styleUrls: ['./side-menu.component.scss'],
+  standalone: true,
+  imports: [RouterModule, CommonModule]
 })
 export class SideMenuComponent {
-
+  // Component logic here
 }

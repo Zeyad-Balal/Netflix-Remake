@@ -1,107 +1,8 @@
 <section class="fluid-container">
   <div class="home-container">
-    <div class="col-2 sidebar">
-      <div class="logo">
-        <img src="../../../assets/images/Netflix_Logo_RGB.png" alt="logo" />
-      </div>
-      <hr />
-      <div class="menu">
-        <ul class="nav flex-column">
-          <h6>Menu</h6>
-          <li class="nav-item">
-            <a routerLink="/home" class="nav-link" routerLinkActive="active">
-              <span><i class="fas fa-home"></i> Home</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              routerLink="discovery"
-              class="nav-link"
-              routerLinkActive="active"
-            >
-              <span><i class="fas fa-search"></i> Discovery</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              routerLink="community"
-              class="nav-link"
-              routerLinkActive="active"
-            >
-              <span><i class="fas fa-users"></i> Community</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              routerLink="coming soon"
-              class="nav-link"
-              routerLinkActive="active"
-            >
-              <span><i class="fas fa-calendar-alt"></i> Coming soon</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <hr />
-      <div class="library">
-        <ul class="nav flex-column">
-          <h6>Library</h6>
-          <li class="nav-item">
-            <a routerLink="recent" class="nav-link" routerLinkActive="active">
-              <span><i class="fas fa-clock"></i> Recent</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              routerLink="bookmarked"
-              class="nav-link"
-              routerLinkActive="active"
-            >
-              <span><i class="fas fa-bookmark"></i> Bookmarked</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              routerLink="top-rated"
-              class="nav-link"
-              routerLinkActive="active"
-            >
-              <span><i class="fas fa-star"></i> Top Rated</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              routerLink="downloads"
-              class="nav-link"
-              routerLinkActive="active"
-            >
-              <span><i class="fas fa-download"></i> Downloads</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <hr />
-      <div class="settings">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a routerLink="settings" class="nav-link" routerLinkActive="active">
-              <span><i class="fas fa-cog"></i> Settings</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="help" class="nav-link" routerLinkActive="active">
-              <span><i class="fas fa-question-circle"></i> Help</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="logout" class="nav-link" routerLinkActive="active">
-              <span><i class="fas fa-sign-out-alt"></i> Logout</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+    <div class="col-2">
+      <app-side-menu></app-side-menu>
     </div>
-    <!-- content -->
     <div class="col-10 content">
       <app-nav></app-nav>
 
@@ -185,7 +86,7 @@
                   <div class="overlay">
                     <div class="movie-footer">
                       <div class="movie-info">
-                        <h6>{{ movie.title }}</h6>
+                        <h6>{{ movie.title }} {{movie.name}}</h6>
                         <p>{{ movie.release_date | date : "yyyy" }}</p>
                         <span>
                           {{ movie.vote_average | number : "1.1-1" }}

@@ -4,48 +4,29 @@
       <app-side-menu></app-side-menu>
     </div>
     <div class="col-10 content">
-      <!-- <app-nav></app-nav> -->
-      <section class="upcoming-section">
-        <div class="hero-banner" *ngIf="upcomingMovies.length > 0">
-          <div class="backdrop" [style.backgroundImage]="'url(' + image_path + upcomingMovies[0].backdrop_path + ')'">
-            <div class="gradient-overlay"></div>
-          </div>
-          <div class="hero-content">
-            <div class="header-nav">
-              <h1>Upcoming Releases</h1>
-            </div>
-            <div class="featured-movie">
-              <h2>{{upcomingMovies[0].title}}</h2>
-              <p class="release-date">Release Date: {{upcomingMovies[0].release_date | date:'MMMM d, y'}}</p>
-              <p class="overview">{{upcomingMovies[0].overview}}</p>
-              <div class="actions">
-                <button class="remind-btn">
-                  <i class="fa-solid fa-bell"></i> Set Reminder
-                </button>
-                <button class="info-btn">
-                  <i class="fa-solid fa-play"></i> Watch Trailer
-                </button>
-              </div>
-            </div>
-          </div>
+      <section class="all-movies-section">
+        <div class="header">
+          <h1>All Movies</h1>
+          <p>Discover the most popular movies right now</p>
         </div>
 
-        <div class="content-section">
-          <h2 class="section-title">Coming Soon</h2>
-          
+        <div class="loading-spinner" *ngIf="loading">
+          <div class="spinner"></div>
+        </div>
+
+        <ng-container *ngIf="!loading">
           <div class="movies-grid">
-            <div *ngFor="let movie of upcomingMovies" class="movie-card" [routerLink]="['/details', movie.id]">
+            <div *ngFor="let movie of movies" class="movie-card" [routerLink]="['/details', movie.id]">
               <div class="poster">
                 <img [src]="movie.poster_path ? (image_path + movie.poster_path) : 'assets/images/no-poster.jpg'" [alt]="movie.title">
-                <div class="ribbon" *ngIf="isComingSoon(movie.release_date)">COMING SOON</div>
                 <div class="overlay">
                   <div class="quick-info">
                     <div class="rating">
                       <i class="fa-solid fa-star"></i>
                       <span>{{movie.vote_average | number:'1.1-1'}}</span>
                     </div>
-                    <button class="remind-btn-small">
-                      <i class="fa-solid fa-bell"></i>
+                    <button class="watch-btn">
+                      <i class="fa-solid fa-play"></i>
                     </button>
                   </div>
                 </div>
@@ -73,7 +54,7 @@
               <i class="fa-solid fa-chevron-right"></i>
             </button>
           </div>
-        </div>
+        </ng-container>
       </section>
     </div>
   </div>

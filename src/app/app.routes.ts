@@ -7,6 +7,7 @@ import { WatchListComponent } from './components/watch-list/watch-list.component
 import { LoginComponent } from './components/login/login.component';
 import { LandPageComponent } from './components/land-page/land-page.component';
 import { UpComingComponent } from './components/up-coming/up-coming.component';
+import { AllMoviesComponent } from './components/all-movies/all-movies.component';
 
 export const routes: Routes = [
   {
@@ -54,6 +55,11 @@ export const routes: Routes = [
   {
     path: 'details/:id',
     component: MovieSeriesDetailsComponent,
+    title: 'Movies',
+  },
+  {
+    path: 'all-movies',
+    component: AllMoviesComponent,
     title: 'Movies',
   },
   {

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../environments/env';
 import { Observable } from 'rxjs';
 import { UpcomingMoviesResponse } from '../interfaces/upcoming.interface';
+import { MovieResponse } from '../interfaces/imovie';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +30,13 @@ export class MovieService {
   getUpcomingMovies(page: number = 1): Observable<UpcomingMoviesResponse> {
     return this._HttpClient.get<UpcomingMoviesResponse>(
       `${environment.base_url}movie/upcoming?language=en-US&page=${page}`,
+      { headers: this.headers }
+    );
+  }
+
+  getTrendingMovies(page: number = 1): Observable<MovieResponse> {
+    return this._HttpClient.get<MovieResponse>(
+      `${environment.base_url}trending/movie/day?language=en-US&page=${page}`,
       { headers: this.headers }
     );
   }

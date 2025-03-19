@@ -6,8 +6,28 @@
     <div class="col-10 content">
       <section class="all-movies-section">
         <div class="header">
-          <h1>All Movies</h1>
+          <h1>Movies Discovery</h1>
           <p>Discover the most popular movies right now</p>
+        </div>
+
+        <div class="search">
+          <input 
+            type="text" 
+            placeholder="Search for movies, TV shows, and more..." 
+            [(ngModel)]="query"
+            (input)="onSearch()"
+          />
+          <button class="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+          <button *ngIf="query" class="clear-btn" (click)="clearSearch()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="search-status" *ngIf="isSearching">
+          <p>Search results for: <strong>"{{query}}"</strong></p>
+          <button class="back-btn" (click)="clearSearch()">Back to All Movies</button>
         </div>
 
         <div class="loading-spinner" *ngIf="loading">

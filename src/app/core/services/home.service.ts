@@ -34,9 +34,9 @@ export class HomeService {
     }
   }
 
-  searchOnMovie(query: string): Observable<MovieResponse> {
+  searchOnMovie(query: string, page: number = 1): Observable<MovieResponse> {
     return this._HttpClient.get<MovieResponse>(
-      `${environment.base_url}search/movie?query=${query}&language=en-US&page=1`,
+      `${environment.base_url}search/movie?query=${query}&language=en-US&page=${page}`,
       { headers: this.headers }
     );
   }

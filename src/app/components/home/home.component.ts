@@ -16,7 +16,6 @@ import { SideMenuComponent } from '../side-menu/side-menu.component';
     FormsModule,
     CommonModule,
     CarouselModule,
-    // RouterOutlet,
     RouterLink,
     RouterLinkActive,
     NavComponent,
@@ -28,7 +27,6 @@ import { SideMenuComponent } from '../side-menu/side-menu.component';
 export class HomeComponent implements OnInit {
   movies: IMovie[] = [];
   image_path = environment.image_url;
-  query: string = '';
 
   constructor(private readonly _HomeService: HomeService) {}
 
@@ -39,9 +37,6 @@ export class HomeComponent implements OnInit {
     pullDrag: false,
     dots: false,
     navSpeed: 700,
-    // autoplay: true,
-    // autoplayTimeout: 2000,
-    // autoplayHoverPause: true,
     navText: [
       '<i class="fa-solid fa-chevron-left"></i>',
       '<i class="fa-solid fa-chevron-right"></i>',
@@ -102,19 +97,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  onSearch() {
-    if (this.query.trim()) {
-      this._HomeService.searchOnMovie(this.query).subscribe({
-        next: (res) => {
-          this.movies = res.results;
-          console.log(res);
-        }
-      });
-    }
-  }
-
   getStarRating(rating: number): number[] {
-    // Convert 10-point scale to 5-point scale
     const fiveStarRating = Math.round(rating / 2);
     return Array(5)
       .fill(0)

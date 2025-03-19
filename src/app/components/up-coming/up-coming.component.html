@@ -31,26 +31,28 @@
         </div>
 
         <div class="content-section">
+          <h2 class="section-title">Coming Soon</h2>
+          
           <div class="movies-grid">
             <div *ngFor="let movie of upcomingMovies" class="movie-card" [routerLink]="['/details', movie.id]">
               <div class="poster">
-                <img [src]="image_path + movie.poster_path" [alt]="movie.title">
+                <img [src]="movie.poster_path ? (image_path + movie.poster_path) : 'assets/images/no-poster.jpg'" [alt]="movie.title">
+                <div class="ribbon" *ngIf="isComingSoon(movie.release_date)">COMING SOON</div>
                 <div class="overlay">
-                  <div class="movie-info">
-                    <h3>{{movie.title}}</h3>
-                    <div class="meta">
-                      <div class="rating">
-                        <i class="fa-solid fa-star"></i>
-                        <span>{{movie.vote_average | number:'1.1-1'}}</span>
-                      </div>
-                      <div class="release">
-                        <i class="fa-regular fa-calendar"></i>
-                        <span>{{movie.release_date | date:'MMM d, y'}}</span>
-                      </div>
+                  <div class="quick-info">
+                    <div class="rating">
+                      <i class="fa-solid fa-star"></i>
+                      <span>{{movie.vote_average | number:'1.1-1'}}</span>
                     </div>
-                    <p class="overview">{{movie.overview | slice:0:100}}...</p>
+                    <button class="remind-btn-small">
+                      <i class="fa-solid fa-bell"></i>
+                    </button>
                   </div>
                 </div>
+              </div>
+              <div class="movie-info">
+                <h3>{{movie.title}}</h3>
+                <p class="release">{{movie.release_date | date:'MMM d, y'}}</p>
               </div>
             </div>
           </div>
@@ -59,9 +61,13 @@
             <button class="nav-btn" [disabled]="currentPage === 1" (click)="previousPage()">
               <i class="fa-solid fa-chevron-left"></i>
             </button>
-            <div class="pages">
-              <span class="current">{{currentPage}}</span>
-              <span class="total">of {{totalPages}}</span>
+            <div class="page-indicators">
+              <button 
+                *ngFor="let page of getVisiblePages()" 
+                [class.active]="page === currentPage"
+                (click)="loadMovies(page)">
+                {{page}}
+              </button>
             </div>
             <button class="nav-btn" [disabled]="currentPage === totalPages" (click)="nextPage()">
               <i class="fa-solid fa-chevron-right"></i>

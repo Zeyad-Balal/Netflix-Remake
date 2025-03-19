@@ -32,7 +32,7 @@ export class UpComingComponent implements OnInit {
     this._MovieService.getUpcomingMovies(page).subscribe({
       next: (response) => {
         this.upcomingMovies = response.results;
-        this.totalPages = response.total_pages;
+        this.totalPages = Math.min(response.total_pages, 500); // API usually limits to 500 pages max
         this.currentPage = page;
       },
       error: (err) => {
@@ -56,5 +56,30 @@ export class UpComingComponent implements OnInit {
   getStarRating(rating: number): number[] {
     const stars = Math.round(rating / 2);
     return Array(5).fill(0).map((_, index) => (index < stars ? 1 : 0));
+  }
+  
+  isComingSoon(releaseDate: string): boolean {
+    const today = new Date();
+    const release = new Date(releaseDate);
+    // If release date is in the future
+    return release > today;
+  }
+  
+  getVisiblePages(): number[] {
+    const visiblePages = [];
+    const maxVisiblePages = 5;
+    
+    let startPage = Math.max(1, this.currentPage - Math.floor(maxVisiblePages / 2));
+    const endPage = Math.min(this.totalPages, startPage + maxVisiblePages - 1);
+    
+    if (endPage - startPage + 1 < maxVisiblePages) {
+      startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+    
+    for (let i = startPage; i <= endPage; i++) {
+      visiblePages.push(i);
+    }
+    
+    return visiblePages;
   }
 }

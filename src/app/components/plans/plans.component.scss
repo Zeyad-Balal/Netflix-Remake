@@ -131,13 +131,40 @@
   border-radius: 15px;
   padding: 10px 10px 10px 10px;
   transition: all 0.5s;
+  cursor: pointer;
+  position: relative;
 }
+
 .plan-card:hover{
   transform: scale(1.1);
-
-
 }
 
+.plan-card.selected {
+  border: 2px solid #e50914;
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card.selected .ico {
+  color: #ffffff;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.plan-card.dimmed {
+  opacity: 0.6;
+  transform: scale(0.98);
+  filter: grayscale(20%);
+}
+
+.plan-card .ico {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.plan-card:hover:not(.dimmed) {
+  transform: translateY(-5px);
+}
 
 .plan-name {
   background: linear-gradient(90deg, #214E9C, #7e38a3);

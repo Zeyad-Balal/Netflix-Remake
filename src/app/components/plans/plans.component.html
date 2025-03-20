@@ -1,4 +1,4 @@
-  <section>
+<section>
     <div class="cont">
       <div class="header">
         <div class="logo">
@@ -6,7 +6,7 @@
         </div>
 
         <div class="sign-out">
-          <button>Sign Out</button>
+          <button routerLink="/land">Sign Out</button>
         </div>
       </div>
       <hr />
@@ -22,7 +22,10 @@
 
         <div class="plan cr">
           <!-- basic -->
-          <div class="plan-card basic-plan">
+          <div class="plan-card basic-plan" 
+               [class.selected]="selectedPlan === 'basic'"
+               [class.dimmed]="selectedPlan !== 'basic'"
+               (click)="selectPlan('basic')">
             <!-- plan name -->
             <div class="plan-name">
               <h3>Basic</h3>
@@ -69,7 +72,10 @@
             </div>
           </div>
           <!-- standard  -->
-          <div class="plan-card standard-plan">
+          <div class="plan-card standard-plan"
+               [class.selected]="selectedPlan === 'standard'"
+               [class.dimmed]="selectedPlan !== 'standard'"
+               (click)="selectPlan('standard')">
             <!-- plan name -->
             <div class="plan-name">
               <h3>Standard</h3>
@@ -118,7 +124,10 @@
     <!-- <div class="most-pop"></div> -->
           <!-- premium -->
           
-          <div class="plan-card premium-plan">
+          <div class="plan-card premium-plan"
+               [class.selected]="selectedPlan === 'premium'"
+               [class.dimmed]="selectedPlan !== 'premium'"
+               (click)="selectPlan('premium')">
             <div class="most-popular-flag">Most Popular</div>
             <!-- plan name -->
             <div class="plan-name">

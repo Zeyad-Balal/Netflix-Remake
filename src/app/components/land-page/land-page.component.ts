@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { LandPageService } from '../../core/services/land-page.service';
 import { IMovie, MovieResponse } from '../../core/interfaces/imovie';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-land-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule , RouterLink],
   templateUrl: './land-page.component.html',
   styleUrl: './land-page.component.scss'
 })

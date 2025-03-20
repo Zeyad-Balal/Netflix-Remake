@@ -9,6 +9,8 @@ import { LandPageComponent } from './components/land-page/land-page.component';
 import { UpComingComponent } from './components/up-coming/up-coming.component';
 import { AllMoviesComponent } from './components/all-movies/all-movies.component';
 import { TopRatedComponent } from './components/top-rated/top-rated.component';
+import { Sign } from 'crypto';
+import { SignupComponent } from './components/signup/signup.component';
 
 export const routes: Routes = [
   {
@@ -20,6 +22,11 @@ export const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     title: 'Login',
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
+    title: 'Sign up',
   },
   {
     path: 'land',

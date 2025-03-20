@@ -1,0 +1,111 @@
+.cont {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)) ,url("../../../assets/images/n.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 100vh;
+    font-family: 'Segoe UI';
+    overflow: hidden;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.712);
+    height: 100vh;
+}
+
+.logo img {
+    width: 13%;
+    transform: translateX(140%);
+}
+
+.signup-form {
+    height: 100vh;
+    background-color: white;
+    color: white;
+}
+
+.cr {
+    cursor: pointer;
+}
+
+.form-body {
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 7px;
+    padding: 50px;
+    width: 25%;
+    margin: auto;
+    transform: translateY(10%);
+}
+
+.form-body h2 {
+    color: white;
+    margin-bottom: 12px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.form-inputs input {
+    margin: 5px 0;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    border: 0.1px solid rgba(255, 255, 255, 0.35);
+}
+
+.form-inputs input:focus {
+    border: 2px solid white;
+}
+
+.password, .confirm-password {
+    position: relative;
+}
+
+.password span, .confirm-password span {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    opacity: 0.5;
+}
+
+.signup-btn button {
+    color: white;
+    margin: 15px 0;
+    border-radius: 4px;
+    background-color: red;
+    text-align: center;
+    width: 100%;
+}
+
+.signup-btn button:hover {
+    background-color: rgb(168, 10, 10);
+}
+
+.login {
+    margin: 10px 0;
+}
+
+.login p {
+    color: grey;
+    font-weight: 400;
+}
+
+.login a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.warn-p {
+    color: grey;
+    font-size: small;
+    margin-top: 10px;
+}
+
+.learnmore a {
+    font-size: small;
+    font-weight: lighter;
+    color: white;
+    text-decoration: underline;
+}

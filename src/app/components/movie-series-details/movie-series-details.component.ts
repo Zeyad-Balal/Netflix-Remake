@@ -5,7 +5,7 @@ import { MovieService } from '../../core/services/movie.service';
 import { ActivatedRoute } from '@angular/router';
 import { IMovieDetails } from '../../core/services/imovie-details';
 import e from 'express';
-import { environment } from '../../core/environments/env';
+import { environment } from '../../core/environments/environment';
 import { DatePipe, DecimalPipe } from '@angular/common';
 
 @Component({

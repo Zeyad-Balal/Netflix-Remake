@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NavComponent } from '../nav/nav.component';
 import { IMovie, MovieResponse } from '../../core/interfaces/imovie';
-import { environment } from '../../core/environments/env';
+import { environment } from '../../core/environments/environment';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { SideMenuComponent } from '../side-menu/side-menu.component';
 

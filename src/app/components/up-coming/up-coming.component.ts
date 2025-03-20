@@ -4,7 +4,7 @@ import { UpcomingMovie } from '../../core/interfaces/upcoming.interface';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { environment } from '../../core/environments/env';
+import { environment } from '../../core/environments/environment';
 import { NavComponent } from "../nav/nav.component";
 import { SideMenuComponent } from '../side-menu/side-menu.component';
 

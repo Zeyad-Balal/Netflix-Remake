@@ -1,4 +1,4 @@
-import { environment } from './../../core/environments/env';
+import { environment } from '../../core/environments/environment';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { LandPageService } from '../../core/services/land-page.service';

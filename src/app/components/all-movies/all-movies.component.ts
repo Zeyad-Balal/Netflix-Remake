@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { MovieService } from '../../core/services/movie.service';
 import { IMovie } from '../../core/interfaces/imovie';
-import { environment } from '../../core/environments/env';
+import { environment } from '../../core/environments/environment';
 import { SideMenuComponent } from '../side-menu/side-menu.component';
 import { NavComponent } from '../nav/nav.component';
 import { HomeService } from '../../core/services/home.service';

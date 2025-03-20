@@ -1,7 +1,7 @@
 import { Observable, of, tap } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '../environments/env';
+import { environment } from '../environments/environment';
 import { MovieResponse } from '../interfaces/imovie';
 import { CacheService } from './cache.service';
 

@@ -40,4 +40,11 @@ export class MovieService {
       { headers: this.headers }
     );
   }
+
+  getTopRatedTvShows(page: number = 1): Observable<any> {
+    return this._HttpClient.get<any>(
+      `${environment.base_url}tv/top_rated?language=en-US&page=${page}`,
+      { headers: this.headers }
+    );
+  }
 }

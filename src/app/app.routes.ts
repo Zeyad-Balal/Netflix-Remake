@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { LandPageComponent } from './components/land-page/land-page.component';
 import { UpComingComponent } from './components/up-coming/up-coming.component';
 import { AllMoviesComponent } from './components/all-movies/all-movies.component';
+import { TopRatedComponent } from './components/top-rated/top-rated.component';
 
 export const routes: Routes = [
   {
@@ -61,6 +62,11 @@ export const routes: Routes = [
     path: 'all-movies',
     component: AllMoviesComponent,
     title: 'Movies',
+  },
+  {
+    path: 'top-rated',
+    component: TopRatedComponent,
+    title: 'Top Rated',
   },
   {
     path: 'up-coming',

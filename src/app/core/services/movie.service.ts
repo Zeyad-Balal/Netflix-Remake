@@ -4,6 +4,7 @@ import { environment } from '../environments/env';
 import { Observable } from 'rxjs';
 import { UpcomingMoviesResponse } from '../interfaces/upcoming.interface';
 import { MovieResponse } from '../interfaces/imovie';
+import { TvShowsResponse } from '../interfaces/tv-shows.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -41,8 +42,8 @@ export class MovieService {
     );
   }
 
-  getTopRatedTvShows(page: number = 1): Observable<any> {
-    return this._HttpClient.get<any>(
+  getTopRatedTvShows(page: number = 1): Observable<TvShowsResponse> {
+    return this._HttpClient.get<TvShowsResponse>(
       `${environment.base_url}tv/top_rated?language=en-US&page=${page}`,
       { headers: this.headers }
     );

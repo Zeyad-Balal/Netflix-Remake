@@ -1,0 +1,82 @@
+<section class="fluid-container">
+  <div class="home-container">
+    <div class="col-2">
+      <app-side-menu></app-side-menu>
+    </div>
+    <div class="col-10 content">
+      <section class="top-rated-section">
+        <div class="header">
+          <h1>Top Rated TV Shows</h1>
+          <p>Discover the highest rated TV shows of all time</p>
+        </div>
+
+        <div class="loading-spinner" *ngIf="loading">
+          <div class="spinner"></div>
+        </div>
+
+        <div class="shows-grid" *ngIf="!loading">
+          <div class="show-card" *ngFor="let show of tvShows">
+            <div class="poster">
+              <img [src]="imageBaseUrl + show.poster_path" [alt]="show.name">
+              <div class="overlay">
+                <div class="quick-info">
+                  <div class="rating">
+                    <div class="stars">
+                      <i *ngFor="let star of getStarRating(show.vote_average)" 
+                         class="fa-solid fa-star"
+                         [class.filled]="star === 1">
+                      </i>
+                    </div>
+                    <span>{{show.vote_average | number:'1.1-1'}}</span>
+                  </div>
+                  <div class="action-buttons">
+                    <button class="watch-btn">
+                      <i class="fa-solid fa-play"></i>
+                      <span>Watch Now</span>
+                    </button>
+                    <button class="add-btn">
+                      <i class="fa-solid fa-plus"></i>
+                      <span>Add to List</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="show-info">
+              <h3>{{show.name}}</h3>
+              <p class="date">{{show.first_air_date | date:'MMM d, y'}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination" *ngIf="!loading && totalPages > 1">
+          <div class="pagination-container">
+            <button class="nav-btn prev" [disabled]="currentPage === 1" (click)="previousPage()">
+              <i class="fa-solid fa-angle-left"></i>
+              <span>Previous</span>
+            </button>
+            
+            <div class="page-numbers">
+              <button 
+                *ngFor="let page of getVisiblePages()" 
+                [class.active]="page === currentPage"
+                [class.dots]="page === '...'"
+                [disabled]="page === '...'"
+                (click)="loadTopRatedShows(+page)">
+                {{page}}
+              </button>
+            </div>
+
+            <button class="nav-btn next" [disabled]="currentPage === totalPages" (click)="nextPage()">
+              <span>Next</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+          <div class="page-info">
+            Page {{currentPage}} of {{totalPages}}
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

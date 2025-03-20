@@ -4,11 +4,13 @@ import { Component, OnInit } from '@angular/core';
 import { LandPageService } from '../../core/services/land-page.service';
 import { IMovie, MovieResponse } from '../../core/interfaces/imovie';
 import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-land-page',
   standalone: true,
-  imports: [CommonModule , RouterLink],
+  imports: [CommonModule, RouterLink, FormsModule],
   templateUrl: './land-page.component.html',
   styleUrl: './land-page.component.scss'
 })
@@ -38,7 +40,12 @@ export class LandPageComponent implements OnInit {
 
   image_path = environment.image_url;
   movies:IMovie[] = [];
-  constructor(private readonly _LandPageService: LandPageService) { }
+  userEmail: string = '';
+
+  constructor(
+    private readonly _LandPageService: LandPageService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
 
@@ -50,5 +57,11 @@ export class LandPageComponent implements OnInit {
     });
   }
 
-
+  onGetStarted() {
+    if (this.userEmail) {
+      this.router.navigate(['/plans'], { 
+        state: { email: this.userEmail } 
+      });
+    }
+  }
 }

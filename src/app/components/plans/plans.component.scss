@@ -231,4 +231,302 @@ position: relative;
   background: linear-gradient(90deg, #5c3ccc, #d60420);
 }
 
+.login-form {
+  width: 40%;
+  margin: -20px auto 0; // Adjusted margin-top to be negative
+  padding: 40px 68px; // Reduced padding
+  background-color: white;
+  border-radius: 4px;
+
+  .form-title {
+    margin-bottom: 20px; // Reduced margin
+    
+    span {
+      color: #333;
+      font-size: 13px;
+    }
+
+    h2 {
+      font-size: 28px; // Slightly smaller font
+      margin: 8px 0;
+    }
+
+    p {
+      font-size: 15px; // Slightly smaller font
+      margin: 4px 0;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      color: #333;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 16px 20px;
+      font-size: 16px;
+      border: 1px solid #8c8c8c;
+      border-radius: 4px;
+      color: #333;
+
+      &:disabled {
+        background-color: #f4f4f4;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: #0071eb;
+      }
+    }
+  }
+
+  .password-group {
+    .password-input {
+      position: relative;
+
+      .toggle-password {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #8c8c8c;
+        cursor: pointer;
+        padding: 0;
+        font-size: 16px;
+
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+  }
+
+  .forgot-password {
+    color: #0071eb;
+    text-decoration: none;
+    font-size: 14px;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .next-btn {
+    margin-top: 40px;
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+.benefits {
+  margin-top: 20px;
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    
+    gap: 10px;
+    margin-bottom: 15px;
+
+    i {
+      color: #e50914;
+      font-size: 20px;
+    }
+
+    p {
+      color: #333;
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+
+  .benefit-item {
+    i.fa-check {
+      color: #00c851; // Green checkmarks
+    }
+  }
+}
+
+.payment-form {
+  width: 40%;
+  margin: -20px auto 0;
+  padding: 40px 68px;
+  background-color: white;
+  border-radius: 4px;
+
+  .form-title {
+    margin-bottom: 30px;
+    text-align: center;
+
+    span {
+      color: #333;
+      font-size: 13px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin: 15px 0;
+      color: #333;
+    }
+
+    p {
+      color: #737373;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+  }
+
+  .security-features {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      i {
+        color: #e50914;
+        font-size: 20px;
+      }
+
+      span {
+        color: #333;
+        font-size: 16px;
+      }
+
+      i.fa-lock {
+        color: #00c851; // Green for security
+      }
+      i.fa-times-circle {
+        color: #ff3547; // Red for cancel
+      }
+      i.fa-shield-alt {
+        color: #33b5e5; // Blue for protection
+      }
+    }
+  }
+
+  .payment-options {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .payment-option {
+   
+      
+      padding: 20px;
+      border: 2px solid #e6e6e6;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: #e50914;
+        transform: translateY(-2px);
+      }
+
+      .option-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .option-title {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          i {
+            font-size: 24px;
+            color: #e50914;
+          }
+
+          h3 {
+            margin: 0;
+            color: #333;
+            font-size: 18px;
+          }
+
+          i.fa-credit-card {
+            background: linear-gradient(135deg, #2196f3, #1976d2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          
+          i.fa-money-bill-wave {
+            background: linear-gradient(135deg, #43a047, #2e7d32);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        .card-types {
+          display: flex;
+          gap: 10px;
+
+          i.fa-cc-visa {
+            font-size: 30px;
+            color: #1a1f71; // Visa blue
+          }
+
+          i.fa-cc-mastercard {
+            font-size: 30px;
+            color: #eb001b; // Mastercard red
+            background: linear-gradient(90deg, #eb001b 0%, #f79e1b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        .provider {
+          span {
+            font-size: 18px;
+            color: #ffce0d; // Fawry yellow
+            font-weight: 500;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+          }
+        }
+      }
+
+      &.selected {
+        border-color: #e50914;
+        background-color: rgba(229, 9, 20, 0.05);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(229, 9, 20, 0.1);
+
+        .option-title h3 {
+          color: #e50914;
+        }
+      }
+
+      &:not(.selected) {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .next-btn {
+    margin-top: 40px;
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+.plan-card {
+  .ico {
+    color: #00c851; // Green checkmark for selected plans
+  }
+}
+
 

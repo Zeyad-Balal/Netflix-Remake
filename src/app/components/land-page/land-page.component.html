@@ -29,8 +29,10 @@
         </div>
 
         <div class="body-form">
-          <input type="email" placeholder="Email address" />
-          <button class="btn" routerLink="/plans">
+          <input type="email" 
+                 placeholder="Email address" 
+                 [(ngModel)]="userEmail" />
+          <button class="btn" (click)="onGetStarted()">
             Get Started
             <i class="fa-solid fa-arrow-right"></i>
           </button>
